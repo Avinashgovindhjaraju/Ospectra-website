@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — Ospectra</title>
+  <link rel="stylesheet" href="shared.css">
+  <style>
+    body { background: #0a0a2e; color: #fff; font-family: 'DM Sans', sans-serif; }
+    .container { max-width: 600px; margin: 60px auto; background: #181848; border-radius: 20px; padding: 40px; }
+    h1 { color: #a855f7; }
+    .info { margin-top: 20px; font-size: 1.1rem; }
+    .logout { margin-top: 30px; background: #f87171; color: #fff; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Ospectra!</h1>
+    <div class="info" id="user-info"></div>
+    <button class="logout" onclick="logout()">Logout</button>
+  </div>
+  <script>
+    const user = JSON.parse(localStorage.getItem('ospectra_user'));
+    if (!user) {
+      window.location.href = 'Login.html';
+    } else {
+      document.getElementById('user-info').textContent = `Logged in as: ${user.username} | Age: ${user.age}`;
+    }
+    function logout() {
+      localStorage.removeItem('ospectra_user');
+      window.location.href = 'Login.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — Ospectra Agentic AI Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<!-- Stars BG -->
+<div class="stars-bg"></div>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-icon">🍪</div>
+  <div class="cookie-text">
+    <h4>We use cookies</h4>
+    <p>We use cookies to enhance your browsing experience, analyse traffic, and personalise content. By clicking "Accept All", you agree to our <a href="#">Cookie Policy</a>.</p>
+  </div>
+  <div class="cookie-btns">
+    <button class="btn-cookie-decline" onclick="declineCookies()">Decline</button>
+    <button class="btn-cookie-accept" onclick="acceptCookies()">Accept All</button>
+  </div>
+</div>
+
+<!-- Notification Toast -->
+<div id="notif"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">O</div>
+    <span class="logo-text">O<span>spectra</span></span>
+  </a>
+  <div class="nav-links" id="nav-links">
+    <a href="index.html" id="nav-home">Home</a>
+    <a href="about.html" id="nav-about">About</a>
+    <a href="platform.html" id="nav-platform">Platform</a>
+    <a href="solutions.html" id="nav-solutions">Solutions</a>
+    <a href="pricing.html" class="active" id="nav-pricing">Pricing</a>
+    <a href="career.html" id="nav-career">Career</a>
+    <a href="contact.html" id="nav-contact">Contact</a>
+  </div>
+  <div class="nav-ctas">
+    <button class="btn-login">Log in</button>
+    <button class="btn-trial" onclick="showNotif('Free trial coming soon! 🚀')">Start free trial</button>
+    <button class="btn-demo" onclick="openDemo()">Book a Demo</button>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="platform.html">Platform</a>
+  <a href="solutions.html">Solutions</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="career.html">Career</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-ctas">
+    <button class="btn-trial" style="flex:1" onclick="showNotif('Free trial coming soon! 🚀')">Start free trial</button>
+    <button class="btn-demo" style="flex:1" onclick="openDemo()">Book a Demo</button>
+  </div>
+</div>
+
+<!-- PRICING SECTION -->
+<section id="pricing" style="padding-top:130px;">
+  <div class="pricing-header">
+    <div class="section-label" style="justify-content:center;">Pricing</div>
+    <h2 class="section-title">Simple, Transparent Pricing</h2>
+    <p style="color:var(--muted);font-size:1rem;line-height:1.7;margin-top:16px;">Start for free and scale as you grow. All plans include our core agentic AI capabilities.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <div class="price-tier">Starter</div>
+      <div class="price-amount">Free<span></span></div>
+      <div class="price-desc">Perfect for developers and small teams exploring agentic AI.</div>
+      <ul class="price-features">
+        <li><span class="check">✓</span> Up to 3 AI agents</li>
+        <li><span class="check">✓</span> Workflow Builder access</li>
+        <li><span class="check">✓</span> Basic observability</li>
+        <li><span class="check">✓</span> 10k API calls/month</li>
+        <li><span class="check">✓</span> Community support</li>
+      </ul>
+      <button class="btn-plan outline" onclick="showNotif('Get started for free! 🎉')">Get started free</button>
+    </div>
+    <div class="price-card featured">
+      <div class="price-badge">Most Popular</div>
+      <div class="price-tier">Professional</div>
+      <div class="price-amount">$299<span>/mo</span></div>
+      <div class="price-desc">For growing teams needing advanced orchestration and monitoring.</div>
+      <ul class="price-features">
+        <li><span class="check">✓</span> Unlimited AI agents</li>
+        <li><span class="check">✓</span> Full Workflow Builder</li>
+        <li><span class="check">✓</span> Knowledge Model Builder</li>
+        <li><span class="check">✓</span> Advanced observability</li>
+        <li><span class="check">✓</span> 500k API calls/month</li>
+        <li><span class="check">✓</span> Intelligent Orchestration</li>
+        <li><span class="check">✓</span> Priority support</li>
+      </ul>
+      <button class="btn-plan filled" onclick="showNotif('Redirecting to checkout... 💳')">Start free trial</button>
+    </div>
+    <div class="price-card">
+      <div class="price-tier">Enterprise</div>
+      <div class="price-amount">Custom<span></span></div>
+      <div class="price-desc">For large organizations requiring full enterprise capabilities and SLAs.</div>
+      <ul class="price-features">
+        <li><span class="check">✓</span> Everything in Pro</li>
+        <li><span class="check">✓</span> Self-healing workflows</li>
+        <li><span class="check">✓</span> Guardrails & governance</li>
+        <li><span class="check">✓</span> Database Conversion Module</li>
+        <li><span class="check">✓</span> Unlimited API calls</li>
+        <li><span class="check">✓</span> Dedicated support</li>
+        <li><span class="check">✓</span> Custom SLA</li>
+      </ul>
+      <button class="btn-plan outline" onclick="openDemo()">Book a demo</button>
+    </div>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq-section">
+    <h2 class="section-title" style="margin-bottom:0;">Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-header">
+          <h5>What's included in the free plan?</h5>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-content">
+          <p>The Starter plan includes up to 3 AI agents, basic workflow builder access, foundational observability features, 10,000 API calls per month, and access to our community support channels.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header">
+          <h5>Can I upgrade or downgrade my plan anytime?</h5>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-content">
+          <p>Yes! You can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle, and we'll prorate any charges accordingly.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header">
+          <h5>Is there a contract required?</h5>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-content">
+          <p>No contracts are required for Starter or Professional plans. Enterprise customers can customize terms based on their needs. All standard plans are month-to-month with no lock-in.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header">
+          <h5>What support options are available?</h5>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-content">
+          <p>Starter plans include community support. Professional plans get priority email support. Enterprise customers receive 24/7 dedicated account management, technical support, and custom SLAs.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header">
+          <h5>How do API calls work?</h5>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-content">
+          <p>API calls are counted each time your agents make requests to execute workflows, access knowledge models, or run predictions. Unused calls don't roll over to the next month. Enterprise plans include unlimited API calls.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-header">
+          <h5>Can you customize a plan for my organization?</h5>
+          <span class="faq-toggle">▼</span>
+        </div>
+        <div class="faq-content">
+          <p>Absolutely! Enterprise plans are fully customizable. We can tailor features, API limits, support tiers, and SLAs to match your specific requirements. Contact our sales team for a consultation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="margin-bottom:16px;display:flex;align-items:center;gap:10px;">
+        <div class="logo-icon">O</div>
+        <span class="logo-text" style="font-size:1.4rem;">O<span>spectra</span></span>
+      </a>
+      <p>Agentic AI Platform for Scalable, Self-Healing AI Workflows. Empowering enterprises to build adaptive AI systems.</p>
+      <p style="margin-top:12px;font-size:0.82rem;">Ospectra AI Inc<br>info@ospectra.ai</p>
+      <div class="socials">
+        <a class="social-btn" href="https://x.com/ospectraai" target="_blank" title="Twitter/X">𝕏</a>
+        <a class="social-btn" href="https://www.linkedin.com/company/107484037" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="about.html">About</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" onclick="showNotif('Blog coming soon! 📰');return false;">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h5>Product</h5>
+      <a href="platform.html">Platform</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="#" onclick="openDemo();return false;">Book a Demo</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="#" onclick="showNotif('Privacy Policy');return false;">Privacy Policy</a>
+      <a href="#" onclick="showNotif('Terms of Service');return false;">Terms of Service</a>
+      <a href="#" onclick="showNotif('Cookie Policy');return false;">Cookie Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Ospectra AI Inc. All Rights Reserved.</p>
+    <p style="font-size:0.78rem;">Pleasanton, CA 94588, USA</p>
+  </div>
+</footer>
+
+<!-- DEMO MODAL -->
+<div id="demo-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeDemo()">✕</button>
+    <h3>Book a Demo</h3>
+    <p>See how Ospectra's agentic AI platform can transform your business workflows.</p>
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Your full name">
+    </div>
+    <div class="form-group">
+      <label>Work Email</label>
+      <input type="email" placeholder="you@company.com">
+    </div>
+    <div class="form-group">
+      <label>Company Size</label>
+      <select>
+        <option>1–10 employees</option>
+        <option>11–50 employees</option>
+        <option>51–200 employees</option>
+        <option>201–1000 employees</option>
+        <option>1000+ employees</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>What are you looking to solve?</label>
+      <textarea placeholder="Describe your use case..." style="min-height:80px;"></textarea>
+    </div>
+    <button class="btn-submit">
+      Book My Demo →
+    </button>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>

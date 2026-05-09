@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platform — Ospectra Agentic AI Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<!-- Stars BG -->
+<div class="stars-bg"></div>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-icon">🍪</div>
+  <div class="cookie-text">
+    <h4>We use cookies</h4>
+    <p>We use cookies to enhance your browsing experience, analyse traffic, and personalise content. By clicking "Accept All", you agree to our <a href="#">Cookie Policy</a>.</p>
+  </div>
+  <div class="cookie-btns">
+    <button class="btn-cookie-decline" onclick="declineCookies()">Decline</button>
+    <button class="btn-cookie-accept" onclick="acceptCookies()">Accept All</button>
+  </div>
+</div>
+
+<!-- Notification Toast -->
+<div id="notif"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">O</div>
+    <span class="logo-text">O<span>spectra</span></span>
+  </a>
+  <div class="nav-links" id="nav-links">
+    <a href="index.html" id="nav-home">Home</a>
+    <a href="about.html" id="nav-about">About</a>
+    <a href="platform.html" class="active" id="nav-platform">Platform</a>
+    <a href="solutions.html" id="nav-solutions">Solutions</a>
+    <a href="pricing.html" id="nav-pricing">Pricing</a>
+    <a href="career.html" id="nav-career">Career</a>
+    <a href="contact.html" id="nav-contact">Contact</a>
+  </div>
+  <div class="nav-ctas">
+    <button class="btn-login">Log in</button>
+    <button class="btn-trial" onclick="showNotif('Free trial coming soon! 🚀')">Start free trial</button>
+    <button class="btn-demo" onclick="openDemo()">Book a Demo</button>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="platform.html">Platform</a>
+  <a href="solutions.html">Solutions</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="career.html">Career</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-ctas">
+    <button class="btn-trial" style="flex:1" onclick="showNotif('Free trial coming soon! 🚀')">Start free trial</button>
+    <button class="btn-demo" style="flex:1" onclick="openDemo()">Book a Demo</button>
+  </div>
+</div>
+
+<!-- PLATFORM SECTION -->
+<section id="platform" style="padding-top:130px;">
+  <div class="platform-header">
+    <div class="section-label" style="justify-content:center;">Platform</div>
+    <h2 class="section-title">Ospectra Platform<br>consists of</h2>
+    <p style="color:var(--muted);font-size:1rem;line-height:1.7;margin-top:16px;">A powerful set of tools designed to streamline the creation, deployment, and management of intelligent AI agents at enterprise scale.</p>
+  </div>
+  <div class="platform-grid">
+    <div class="platform-card">
+      <div class="card-icon-wrap">📊</div>
+      <h3>Machine Learning Prediction</h3>
+      <p>By using trained models to analyze live and historical data to uncover patterns and forecast future outcomes, our platform continuously learns from data to deliver more accurate, data-driven insights that aid risk assessment and optimization.</p>
+      <p>This enables the agentic workflow to proactively respond to errors in the result and make smarter, more informed decisions.</p>
+      <a href="#" class="card-link" onclick="showNotif('Explore ML Prediction docs →');return false;">Explore now →</a>
+    </div>
+    <div class="platform-card">
+      <div class="card-icon-wrap">🔀</div>
+      <h3>Workflow Builder</h3>
+      <p>The workflow builder enables the creation, customization, and orchestration of agentic workflows through tools and an intuitive interface. By supporting real-time monitoring, sequential and parallel execution, role-based access control, and multi-agent collaboration.</p>
+      <p>This builder enables precise, flexible, and scalable agentic workflows.</p>
+      <a href="#" class="card-link" onclick="showNotif('Explore Workflow Builder →');return false;">Explore now →</a>
+    </div>
+    <div class="platform-card">
+      <div class="card-icon-wrap">🧠</div>
+      <h3>Knowledge Model Builder</h3>
+      <p>The Knowledge Model Builder allows automation of the creation and management of structured knowledge models tailored to specific domains. It enables rapid development and deployment of scalable frameworks that support data ingestion and validation workflows.</p>
+      <p>Further enhances the quality and depth of your knowledge models.</p>
+      <a href="#" class="card-link" onclick="showNotif('Explore Knowledge Model →');return false;">Explore now →</a>
+    </div>
+    <div class="platform-card">
+      <div class="card-icon-wrap">⚡</div>
+      <h3>Intelligent Orchestration</h3>
+      <p>Through the use of real-time data and context awareness, Intelligent Orchestration enables adaptive decision making, assigns tasks, and manages processes and dependencies on dynamic conditions.</p>
+      <p>Guarantees high levels of agility and precision by optimizing resource allocation and load balancing.</p>
+      <a href="#" class="card-link" onclick="showNotif('Explore Orchestration →');return false;">Explore now →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section style="padding:0 5% 100px;">
+  <div style="background:linear-gradient(135deg,rgba(124,58,237,0.2),rgba(192,38,211,0.12));border:1px solid rgba(124,58,237,0.3);border-radius:28px;padding:70px 60px;text-align:center;">
+    <h2 style="font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:16px;">Ready to Build<br>Intelligent Workflows?</h2>
+    <p style="color:var(--muted);font-size:1.05rem;max-width:500px;margin:0 auto 36px;line-height:1.7;">Experience the power of Ospectra's agentic AI platform with a personalized demo tailored to your needs.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <button class="btn-primary" onclick="showNotif('Starting your free trial... 🚀')">Start Free Trial →</button>
+      <button class="btn-secondary" onclick="openDemo()">Book a Demo</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="margin-bottom:16px;display:flex;align-items:center;gap:10px;">
+        <div class="logo-icon">O</div>
+        <span class="logo-text" style="font-size:1.4rem;">O<span>spectra</span></span>
+      </a>
+      <p>Agentic AI Platform for Scalable, Self-Healing AI Workflows. Empowering enterprises to build adaptive AI systems.</p>
+      <p style="margin-top:12px;font-size:0.82rem;">Ospectra AI Inc<br>info@ospectra.ai</p>
+      <div class="socials">
+        <a class="social-btn" href="https://x.com/ospectraai" target="_blank" title="Twitter/X">𝕏</a>
+        <a class="social-btn" href="https://www.linkedin.com/company/107484037" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="about.html">About</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" onclick="showNotif('Blog coming soon! 📰');return false;">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h5>Product</h5>
+      <a href="platform.html">Platform</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="#" onclick="openDemo();return false;">Book a Demo</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="#" onclick="showNotif('Privacy Policy');return false;">Privacy Policy</a>
+      <a href="#" onclick="showNotif('Terms of Service');return false;">Terms of Service</a>
+      <a href="#" onclick="showNotif('Cookie Policy');return false;">Cookie Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Ospectra AI Inc. All Rights Reserved.</p>
+    <p style="font-size:0.78rem;">Pleasanton, CA 94588, USA</p>
+  </div>
+</footer>
+
+<!-- DEMO MODAL -->
+<div id="demo-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeDemo()">✕</button>
+    <h3>Book a Demo</h3>
+    <p>See how Ospectra's agentic AI platform can transform your business workflows.</p>
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Your full name">
+    </div>
+    <div class="form-group">
+      <label>Work Email</label>
+      <input type="email" placeholder="you@company.com">
+    </div>
+    <div class="form-group">
+      <label>Company Size</label>
+      <select>
+        <option>1–10 employees</option>
+        <option>11–50 employees</option>
+        <option>51–200 employees</option>
+        <option>201–1000 employees</option>
+        <option>1000+ employees</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>What are you looking to solve?</label>
+      <textarea placeholder="Describe your use case..." style="min-height:80px;"></textarea>
+    </div>
+    <button class="btn-submit">
+      Book My Demo →
+    </button>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Ospectra Agentic AI Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<!-- Stars BG -->
+<div class="stars-bg"></div>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-icon">🍪</div>
+  <div class="cookie-text">
+    <h4>We use cookies</h4>
+    <p>We use cookies to enhance your browsing experience, analyse traffic, and personalise content. By clicking "Accept All", you agree to our <a href="#">Cookie Policy</a>.</p>
+  </div>
+  <div class="cookie-btns">
+    <button class="btn-cookie-decline" onclick="declineCookies()">Decline</button>
+    <button class="btn-cookie-accept" onclick="acceptCookies()">Accept All</button>
+  </div>
+</div>
+
+<!-- Notification Toast -->
+<div id="notif"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">
+    <div class="logo-icon">O</div>
+    <span class="logo-text">O<span>spectra</span></span>
+  </a>
+  <div class="nav-links" id="nav-links">
+    <a href="index.html" id="nav-home">Home</a>
+    <a href="about.html" class="active" id="nav-about">About</a>
+    <a href="platform.html" id="nav-platform">Platform</a>
+    <a href="solutions.html" id="nav-solutions">Solutions</a>
+    <a href="pricing.html" id="nav-pricing">Pricing</a>
+    <a href="career.html" id="nav-career">Career</a>
+    <a href="contact.html" id="nav-contact">Contact</a>
+  </div>
+  <div class="nav-ctas">
+    <button class="btn-login">Log in</button>
+    <button class="btn-trial" onclick="showNotif('Free trial coming soon! 🚀')">Start free trial</button>
+    <button class="btn-demo" onclick="openDemo()">Book a Demo</button>
+  </div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="platform.html">Platform</a>
+  <a href="solutions.html">Solutions</a>
+  <a href="pricing.html">Pricing</a>
+  <a href="career.html">Career</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-ctas">
+    <button class="btn-trial" style="flex:1" onclick="showNotif('Free trial coming soon! 🚀')">Start free trial</button>
+    <button class="btn-demo" style="flex:1" onclick="openDemo()">Book a Demo</button>
+  </div>
+</div>
+
+<!-- ABOUT SECTION -->
+<section id="about" style="padding-top:130px;">
+  <div class="section-label">About Ospectra</div>
+  <h2 class="section-title">Empowering Agentic<br>AI Development</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>Ospectra is a specialized platform designed to streamline the creation, deployment, and management of Agentic AI systems — AI agents with Humans in the loop or Agents capable of independent decision-making.</p>
+      <p>As the first self-healing Agentic Platform, OSpectra allows enterprises to develop and orchestrate precise, adaptive workflows. Our platform delivers seamless integration and extensive customization through comprehensive fine-tuning using Large Language Models and Large Action Models.</p>
+      <p>OSpectra ensures that AI-driven efficiency evolves alongside your business — from Minimum Viable Products to complete enterprise-scale deployment.</p>
+      <div class="about-features">
+        <div class="feature-pill"><div class="icon">📈</div><span>Scalability & Production Readiness</span></div>
+        <div class="feature-pill"><div class="icon">🤖</div><span>Advanced Agent Development</span></div>
+        <div class="feature-pill"><div class="icon">👁️</div><span>Inbuilt Observability</span></div>
+        <div class="feature-pill"><div class="icon">📊</div><span>Monitoring & Evaluation</span></div>
+      </div>
+    </div>
+    <div class="about-visual">
+      <div class="about-card">
+        <div class="big-icon">🌐</div>
+        <h3>Global Presence</h3>
+        <p>Headquartered in Pleasanton, CA with a global team building the future of agentic AI.</p>
+        <div style="margin-top:24px;padding:16px;background:rgba(255,255,255,0.04);border-radius:14px;border:1px solid var(--border);">
+          <p style="font-size:0.8rem;color:var(--muted);">📍 6200 Stoneridge Mall Road, Unit 3006<br>Pleasanton, CA 94588, USA</p>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:12px;">
+          <div style="flex:1;background:rgba(168,85,247,0.1);border-radius:12px;padding:12px;text-align:center;">
+            <div style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent);">30+</div>
+            <div style="font-size:0.75rem;color:var(--muted);">Reviews</div>
+          </div>
+          <div style="flex:1;background:rgba(168,85,247,0.1);border-radius:12px;padding:12px;text-align:center;">
+            <div style="font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--accent);">4.9★</div>
+            <div style="font-size:0.75rem;color:var(--muted);">G2 Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo" style="margin-bottom:16px;display:flex;align-items:center;gap:10px;">
+        <div class="logo-icon">O</div>
+        <span class="logo-text" style="font-size:1.4rem;">O<span>spectra</span></span>
+      </a>
+      <p>Agentic AI Platform for Scalable, Self-Healing AI Workflows. Empowering enterprises to build adaptive AI systems.</p>
+      <p style="margin-top:12px;font-size:0.82rem;">Ospectra AI Inc<br>info@ospectra.ai</p>
+      <div class="socials">
+        <a class="social-btn" href="https://x.com/ospectraai" target="_blank" title="Twitter/X">𝕏</a>
+        <a class="social-btn" href="https://www.linkedin.com/company/107484037" target="_blank" title="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="about.html">About</a>
+      <a href="career.html">Career</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" onclick="showNotif('Blog coming soon! 📰');return false;">Blog</a>
+    </div>
+    <div class="footer-col">
+      <h5>Product</h5>
+      <a href="platform.html">Platform</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="#" onclick="openDemo();return false;">Book a Demo</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="#" onclick="showNotif('Privacy Policy');return false;">Privacy Policy</a>
+      <a href="#" onclick="showNotif('Terms of Service');return false;">Terms of Service</a>
+      <a href="#" onclick="showNotif('Cookie Policy');return false;">Cookie Policy</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Ospectra AI Inc. All Rights Reserved.</p>
+    <p style="font-size:0.78rem;">Pleasanton, CA 94588, USA</p>
+  </div>
+</footer>
+
+<!-- DEMO MODAL -->
+<div id="demo-modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeDemo()">✕</button>
+    <h3>Book a Demo</h3>
+    <p>See how Ospectra's agentic AI platform can transform your business workflows.</p>
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Your full name">
+    </div>
+    <div class="form-group">
+      <label>Work Email</label>
+      <input type="email" placeholder="you@company.com">
+    </div>
+    <div class="form-group">
+      <label>Company Size</label>
+      <select>
+        <option>1–10 employees</option>
+        <option>11–50 employees</option>
+        <option>51–200 employees</option>
+        <option>201–1000 employees</option>
+        <option>1000+ employees</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>What are you looking to solve?</label>
+      <textarea placeholder="Describe your use case..." style="min-height:80px;"></textarea>
+    </div>
+    <button class="btn-submit">
+      Book My Demo →
+    </button>
+  </div>
+</div>
+
+<script src="shared.js"></script>
+</body>
+</html>
