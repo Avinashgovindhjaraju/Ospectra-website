@@ -104,8 +104,6 @@ function initializeFAQ() {
 }
 
 // ===== CONTACT FORM =====
-// FIX: now sends email + visitor_name at top level so backend writes them
-// to the visitor row and triggers Apollo enrichment immediately.
 function initializeContactForm() {
   const form       = document.querySelector('.contact-form');
   const submitBtn  = document.querySelector('.contact-form .btn-submit');
@@ -119,7 +117,7 @@ function initializeContactForm() {
       window.ospTrack('form_submit', {
         element:      'Contact Form Submit',
         visitor_name: firstName.value.trim(),
-        email:        email.value.trim(),   // ← triggers Apollo match in backend
+        email:        email.value.trim(),
       });
       form.style.display = 'none';
       if (successMsg) successMsg.classList.add('show');
@@ -136,7 +134,6 @@ function initializeContactForm() {
 }
 
 // ===== DEMO FORM =====
-// FIX: same — email + visitor_name sent at top level.
 function initializeDemoForm() {
   const demoSubmitBtn = document.querySelector('#demo-modal .btn-submit');
   if (!demoSubmitBtn) return;
@@ -148,7 +145,7 @@ function initializeDemoForm() {
       window.ospTrack('form_submit', {
         element:      'Book a Demo Form Submit',
         visitor_name: nameInput.value.trim(),
-        email:        emailInput.value.trim(),   // ← triggers Apollo match in backend
+        email:        emailInput.value.trim(),
       });
       showNotif('Demo request sent! Our team will reach out within 24hrs. 🎯');
       closeDemo();
@@ -250,24 +247,15 @@ window.addEventListener('popstate', updateActiveNavLink);
 
 
 // =============================================================
-// OSPECTRA LEAD TRACKER — shared.js
-// v3 FIXES:
-//   FIX 1: Real IP via ipify, sent as top-level real_ip field
-//   FIX 2: element + email + visitor_name at TOP LEVEL payload
-//   FIX 3: Heartbeat ping every 20s (dashboard live tracking)
-//   FIX 4: visitor_name extracted from name_captured correctly
-//   FIX 5: Login tracking reads user.name / user.full_name first
-//   FIX 6: user_identified fires on every page load for returning
-//           logged-in users → backend re-enriches with email
-//   FIX 7: form_submit and email_captured both carry email at
-//           top level so backend Apollo match triggers every time
+// OSPECTRA LEAD TRACKER — shared.js v4
+// Enrichment: Hunter.io (email → person + company) + IPinfo (IP → geo)
 // =============================================================
 (function () {
   'use strict';
 
   const API = 'https://tracker-ospectra-ai.onrender.com/api';
 
-  // ── Visitor ID ────────────────────────────────────────────────
+  // ── Visitor ID (cookie + localStorage, 1 year) ────────────────
   function getVid() {
     let v = null;
     try { v = localStorage.getItem('osp_vid'); } catch(e) {}
@@ -280,7 +268,7 @@ window.addEventListener('popstate', updateActiveNavLink);
     return v;
   }
 
-  // ── Session ID ────────────────────────────────────────────────
+  // ── Session ID (sessionStorage, tab-scoped) ───────────────────
   function getSid() {
     let s = null;
     try { s = sessionStorage.getItem('osp_sid'); } catch(e) {}
@@ -332,9 +320,10 @@ window.addEventListener('popstate', updateActiveNavLink);
     } catch(e) { return 'fp_err_' + Math.random().toString(36).slice(2); }
   }
 
-  // ── FIX 1: Real IP via ipify — fetched once, cached in sessionStorage ────
+  // ── Real IP via ipify ─────────────────────────────────────────
   // Render's proxy makes request.remote_addr always 127.0.0.1.
-  // We fetch the real public IP client-side and send it as real_ip.
+  // We fetch the visitor's real public IP client-side and send it
+  // as real_ip so IPinfo geo enrichment works correctly.
   let _realIP = null;
   try { _realIP = sessionStorage.getItem('osp_real_ip'); } catch(e) {}
 
@@ -350,9 +339,9 @@ window.addEventListener('popstate', updateActiveNavLink);
       .catch(() => cb(null));
   }
 
-  // ── FIX 5: Helper — extract clean name + email from user object ──────────
-  // Priority: explicit name/full_name field > formatted email prefix.
-  // This runs both on login AND on page load for returning users.
+  // ── Extract identity fields from stored user object ───────────
+  // Priority: server-returned name/email > email-prefix fallback.
+  // Server (server.js) now returns name, email, company on login.
   function _extractUser(user) {
     if (!user) return { displayName: null, email: null, company: null };
     const displayName = user.name
@@ -362,16 +351,16 @@ window.addEventListener('popstate', updateActiveNavLink);
                 .replace(/[._\-]+/g, ' ')
                 .replace(/\b\w/g, function(c) { return c.toUpperCase(); })
             : null);
-    // Only use username as email if it actually contains @
     const email = user.email
       || (user.username && user.username.includes('@') ? user.username : null);
     const company = user.company || null;
     return { displayName: displayName, email: email, company: company };
   }
 
-  // ── FIX 2: Core send — ALL key fields at TOP LEVEL ──────────────────────
-  // The backend (track.py) reads email, visitor_name, element directly from
-  // the root of the payload. Anything buried in extra{} alone gets missed.
+  // ── Core send — all identity fields at TOP LEVEL ──────────────
+  // track.py reads email, visitor_name, real_ip directly from the
+  // root of the JSON body — this triggers Hunter enrichment when
+  // email is present, and IPinfo geo for all visitors.
   function send(eventType, extra) {
     extra = extra || {};
     const payload = {
@@ -383,11 +372,9 @@ window.addEventListener('popstate', updateActiveNavLink);
       referrer:     document.referrer || null,
       timezone:     Intl.DateTimeFormat().resolvedOptions().timeZone,
       screen:       screen.width + 'x' + screen.height,
-      // ✅ TOP-LEVEL: backend reads these directly off the payload
       element:      extra.element      || null,
-      email:        extra.email        || null,   // ← triggers Apollo match when present
+      email:        extra.email        || null,
       visitor_name: extra.visitor_name || null,
-      // ✅ FIX 1: real public IP for geo enrichment
       real_ip:      _realIP            || null,
       extra: Object.assign({
         viewport: window.innerWidth + 'x' + window.innerHeight,
@@ -403,21 +390,17 @@ window.addEventListener('popstate', updateActiveNavLink);
     }).catch(function() {});
   }
 
-  // Expose globally so page code can call window.ospTrack(...)
   window.ospTrack = send;
 
-  // ── 1. Fetch real IP first, then fire page_view ───────────────────────────
+  // ── 1. Fetch real IP then fire page_view ──────────────────────
   fetchRealIP(function(ip) {
     _realIP = ip;
     send('page_view');
   });
 
-  // ── FIX 6: Identify already-logged-in user on EVERY page load ────────────
-  // If a user logged in on a previous visit, their data is in localStorage.
-  // We fire user_identified 500ms after page_view so the backend writes
-  // their email to the visitor row and re-runs Apollo enrichment.
-  // Without this, returning logged-in users were anonymous until they
-  // explicitly triggered another login event.
+  // ── 2. Re-identify returning logged-in users on every page load
+  // Fires user_identified 500ms after page_view with email at top
+  // level — track.py triggers Hunter enrichment for this visitor.
   (function identifyReturningUser() {
     try {
       const stored = localStorage.getItem('ospectra_user');
@@ -429,7 +412,7 @@ window.addEventListener('popstate', updateActiveNavLink);
       setTimeout(function() {
         send('user_identified', {
           element:      'Auto-identified (returning user)',
-          email:        u.email,          // ← backend writes this + runs Apollo match
+          email:        u.email,
           visitor_name: u.displayName,
           company:      u.company,
         });
@@ -438,7 +421,7 @@ window.addEventListener('popstate', updateActiveNavLink);
     } catch(e) {}
   })();
 
-  // ── 2. Click tracking ─────────────────────────────────────────────────────
+  // ── 3. Click tracking ─────────────────────────────────────────
   document.addEventListener('click', function(e) {
     const el    = e.target.closest('button, a, [data-track]') || e.target;
     const label = (
@@ -460,7 +443,7 @@ window.addEventListener('popstate', updateActiveNavLink);
     }
   });
 
-  // ── 3. Scroll depth ───────────────────────────────────────────────────────
+  // ── 4. Scroll depth ───────────────────────────────────────────
   const scrollFired = {};
   window.addEventListener('scroll', function() {
     const docH = document.documentElement.scrollHeight;
@@ -471,21 +454,20 @@ window.addEventListener('popstate', updateActiveNavLink);
     });
   }, { passive: true });
 
-  // ── 4. Email capture — FIX 7: email sent at TOP LEVEL ────────────────────
-  // When a user types into any email input and tabs away, we fire email_captured
-  // with the email at the root of the payload (not just in extra{}).
-  // This causes track.py to immediately write visitor.email and trigger Apollo.
+  // ── 5. Email capture ──────────────────────────────────────────
+  // When visitor types email and tabs away — fires enrichment
+  // immediately via Hunter email-finder + companies/find.
   document.addEventListener('change', function(e) {
     const el = e.target;
     if ((el.type === 'email' || el.name === 'email' || el.id === 'email') && el.value) {
       send('email_captured', {
         element: 'Email Field',
-        email:   el.value.trim(),   // ← top-level via send(), triggers Apollo match
+        email:   el.value.trim(),
       });
     }
   });
 
-  // ── 5. Name capture ───────────────────────────────────────────────────────
+  // ── 6. Name capture ───────────────────────────────────────────
   document.addEventListener('change', function(e) {
     const el = e.target;
     const ph = (el.placeholder || '').toLowerCase();
@@ -495,12 +477,12 @@ window.addEventListener('popstate', updateActiveNavLink);
     ) {
       send('name_captured', {
         element:      'Name Field',
-        visitor_name: el.value.trim(),   // ← top-level via send()
+        visitor_name: el.value.trim(),
       });
     }
   });
 
-  // ── 6. Field focus ────────────────────────────────────────────────────────
+  // ── 7. Field focus ────────────────────────────────────────────
   let focusTimer = null;
   document.addEventListener('focusin', function(e) {
     const el = e.target;
@@ -515,7 +497,7 @@ window.addEventListener('popstate', updateActiveNavLink);
     }
   });
 
-  // ── 7. Time on page ───────────────────────────────────────────────────────
+  // ── 8. Time on page ───────────────────────────────────────────
   const timeFired = {};
   [30, 60, 120].forEach(function(sec) {
     setTimeout(function() {
@@ -523,15 +505,16 @@ window.addEventListener('popstate', updateActiveNavLink);
     }, sec * 1000);
   });
 
-  // ── 8. Page exit ──────────────────────────────────────────────────────────
+  // ── 9. Page exit ──────────────────────────────────────────────
   window.addEventListener('beforeunload', function() {
     send('page_exit', { element: window.location.pathname });
   });
 
-  // ── 9. Login tracking — FIX 5: reads name/full_name before email prefix ──
-  // Watches localStorage for 'ospectra_user' being written (fires on login/signup).
-  // Sends email at top level so backend immediately writes it to visitor row
-  // and triggers Apollo /people/match enrichment.
+  // ── 10. Login tracking ────────────────────────────────────────
+  // Watches localStorage for 'ospectra_user' write (login/signup).
+  // Sends email at top level → track.py triggers Hunter enrichment.
+  // server.js now returns name + email + company on login so
+  // _extractUser() gets the real name instead of email-prefix guess.
   const _origSetItem = localStorage.setItem.bind(localStorage);
   localStorage.setItem = function(key, value) {
     _origSetItem(key, value);
@@ -543,7 +526,7 @@ window.addEventListener('popstate', updateActiveNavLink);
         if (u.email || u.displayName) {
           send('user_login', {
             element:      'Login',
-            email:        u.email,          // ← THIS causes Apollo match in backend
+            email:        u.email,
             visitor_name: u.displayName,
             company:      u.company,
           });
@@ -555,14 +538,13 @@ window.addEventListener('popstate', updateActiveNavLink);
     }
   };
 
-  // ── 10. Heartbeat ping every 20s — FIX 3 ─────────────────────────────────
-  // Keeps last_seen updated so the dashboard can show who is live right now.
-  // Dashboard marks a visitor as LIVE if last_seen < 60s ago.
+  // ── 11. Heartbeat every 20s ───────────────────────────────────
+  // Keeps last_seen fresh — dashboard shows LIVE if last_seen < 60s
   setInterval(function() {
     send('heartbeat', { element: window.location.pathname });
   }, 20000);
 
-  // ── 11. SPA navigation ────────────────────────────────────────────────────
+  // ── 12. SPA navigation ────────────────────────────────────────
   let lastPage = window.location.pathname;
   function checkPageChange() {
     if (window.location.pathname !== lastPage) {
@@ -578,5 +560,5 @@ window.addEventListener('popstate', updateActiveNavLink);
 
 })();
 // ═══════════════════════════════════════════════════════════════
-// END OF OSPECTRA TRACKER — shared.js v3
+// END OF OSPECTRA TRACKER — shared.js v4
 // ═══════════════════════════════════════════════════════════════
