@@ -1,0 +1,114 @@
+#book-demo {
+    display: none;
+}
+
+.Book_Demosblock{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: rgba(13, 0, 70, 0.8);
+}
+
+.Book_Demoslevel{
+    width: 100%;
+}
+
+.Book_Demoslogo{
+    width:60%;
+    height: 70vh;
+}
+
+.Book_Demoslogo iframe{
+    width: 100%;
+    height: 100%;
+}
+
+.Book_Demosclosebtn{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}   
+@media screen and (max-width:1660px) {
+    .Book_Demoslogo{
+        height: 650px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .Book_Demoslogo{
+        width:60%;
+        height: 550px;
+    }
+
+    .Book_Demosbtn{
+        width: 35px;
+        height: 35px;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+    .Book_Demoslogo {
+        width: 60%;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .Book_Demoslogo {
+        width: 65%;
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .Book_Demoslogo {
+        width: 70%;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .Book_Demoslogo {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:480px){
+    .Book_Demoslogo {
+        width: 80%;
+    }
+
+    .Book_Demosbtn {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width:380px){
+    .Book_Demoslogo {
+        width: 85%;
+    }
+
+}
+
+@media screen and (max-width:360px){
+    .Book_Demoslogo {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .Book_Demoslogo {
+        width: 95%;
+    }
+
+    .Book_Demosclosebtn{
+        top: 15px;
+        right: 15px;
+    }
+}

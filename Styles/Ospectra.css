@@ -1,0 +1,472 @@
+.bj-foursectionOspetra{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bj-foursectionOspetrabgblock{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.bj-foursectionOspetrabglevel{
+    width:100%;
+    height: 100%;
+    /* position: relative; */
+}
+
+.bj-foursectionOspetrabg{
+    width: 250px;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 80px;
+    bottom: 15%;
+}
+
+.bj-foursectionOspetralevel{
+    width: 100%;
+    height: 100%;
+}
+
+.bj-foursectionOspetralevel .d-flex{
+    height: 100%;
+}
+
+.bj-foursectionOspetratext{
+    height:100%;
+    padding-top: 100px;
+    /* padding-bottom: 100px; */
+}
+
+.bj-foursectionOspetraheader{
+    width: 120px;
+    padding: 12px 20px;
+}
+
+.bj-foursectionOspetraheadertxt{
+    color: #421AD5;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    font-family: "Roboto";
+    margin-bottom: 30px;
+}
+
+.bj-foursectionOspetraheadertxt span{
+    font-weight: 600;
+}
+
+.bj-foursectionOspetratext p{
+    text-align: left;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0px;
+    color: #868d98;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-family: "Roboto";
+}
+
+.bj-foursectionOspetraboxblock{
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+}
+
+.bj-foursectionOspetrabox{
+    width: 85%;
+    display: flex;
+}
+
+.bj-foursectionOspetraboxlevel{
+    width: 50%;
+}
+
+.bj-foursectionOspetrabox1, .bj-foursectionOspetrabox2{
+    width: 100%;
+}
+
+.bj-foursectionOspetrabox1{
+    padding-top: 25px;
+    display: block;
+    border-right:2px dotted #ddd;
+}
+
+.bj-foursectionOspetrabox1 h5{
+    font-size: 30px;
+    font-family: "Roboto";
+    letter-spacing: 0px;
+    color: #421AD5;
+    font-weight: 400;
+    padding-bottom: 25px;
+}
+
+.bj-foursectionOspetrabox1 h5 span{
+    font-family: "Roboto-Bold";
+}
+
+.bj-foursectionOspetrabox1 .about-list{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 50px;
+}
+
+.bj-foursectionOspetrabox1 .about-list li{
+    margin-bottom: 20px;
+}
+
+.bj-foursectionOspetrabox1 .about-list li:last-child{
+    margin-bottom: 0px;
+}
+
+.bj-Ospectrabottomline{
+    width: 90%;
+    border-bottom: 2px dotted #ddd;
+}
+
+.bj-foursectionOspetrabox2{
+    padding-top: 60px;
+}
+
+.bj-foursectionOspetrabox3 h5{
+    line-height: 42px;   
+}
+
+.bj-foursectionOspetrabox3{
+    border-bottom: unset;
+}
+
+.bj-foursectionOspetraboxright{
+    width: 50%;
+}
+
+.bj-foursectionOspetraboxright .bj-foursectionOspetrabox1{
+    border-right: unset;
+    padding-left: 80px;
+}
+
+@media screen and (max-width:1660px) {
+
+    /* .bj-foursectionOspetra{
+        height: 1400px;
+    } */
+
+    .bj-foursectionOspetratext{
+        padding-top: 80px;
+        padding-left: 30px;
+        /* padding-bottom: 80px; */
+    }
+
+    .bj-foursectionOspetraheader{
+        padding: 10px 12px;
+        margin-bottom: 15px;
+    }
+
+    .bj-foursectionOspetraheadertxt{
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    .bj-foursectionOspetratext p{
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 15px;
+    }
+
+    .bj-foursectionOspetrabg{
+        width: 220px;
+        left: 10px;
+        bottom: 340px;
+    }
+
+    .bj-foursectionOspetraboxblock{
+        margin-top: 20px;
+    }
+
+    .bj-foursectionOspetrabox1{
+        padding-top: 20px;
+    }
+
+    .bj-foursectionOspetrabox1 h5{
+        padding-bottom: 20px;
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .bj-foursectionOspetrabox1 .about-list{
+        padding-left: 2.5rem;
+        padding-bottom: 40px;   
+        padding-right: 8rem;
+    }
+
+    .bj-foursectionOspetrabox1 .about-list li{
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+
+    
+}
+
+@media screen and (max-width:1440px) {
+    .bj-foursectionOspetraheader{
+        font-size: 10px;
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .bj-foursectionOspetraheadertxt{
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 15px;
+    }
+
+    .bj-foursectionOspetratext p {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+
+    .bj-foursectionOspetrabox1 h5{
+        font-size: 24px;
+
+    }
+
+    .bj-foursectionOspetrabox1 .about-list li {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .bj-foursectionOspetrabg {
+        width: 220px;
+        left: 10px;
+        bottom: -10px;
+    }
+}
+
+
+
+@media screen and (max-width:1200px) {
+
+    /* .bj-foursectionOspetra {
+        height: 1070px;
+    } */
+
+    .bj-foursectionOspetrabg{
+        width: 145px;
+        left: 0px;
+        bottom: -55px;
+    }
+
+    .bj-foursectionOspetraheader {
+        font-size: 10px;
+        width: 90px;
+    }
+
+    .bj-foursectionOspetraheadertxt {
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 12px;
+    }
+
+    .bj-foursectionOspetratext{
+        padding-left: 0;
+    }
+
+    .bj-foursectionOspetratext p {
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+
+    .bj-foursectionOspetraboxblock {
+        margin-top: 10px;
+    }
+
+    .bj-foursectionOspetrabox1{
+        padding-top: 15px;
+    }
+
+    .bj-foursectionOspetrabox1 h5 {
+        font-size: 20px;
+        line-height: 30px;
+        padding-bottom: 15px;
+    }
+
+    .bj-foursectionOspetrabox1 .about-list {
+        padding-left: 2rem;
+    }
+
+    .bj-foursectionOspetrabox1 .about-list li {
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    .bj-foursectionOspetrabox1 .about-list{
+        padding-bottom: 30px;
+        padding-right: 4rem;
+    }
+
+    .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1{
+        padding-left:50px;
+    }
+
+    .bj-foursectionOspetrabox{
+        width: 100%;
+    }
+    
+}
+
+
+@media screen and (max-width:1080px) {
+    /* .bj-foursectionOspetra {
+        height: 1120px;
+    }     */
+}
+
+@media screen and (max-width:990px) {
+
+    /* .bj-foursectionOspetra {
+        height: 1070px;
+    } */
+
+    .bj-foursectionOspetratext{
+        padding-top: 50px;
+        /* padding-bottom: 50px; */
+    }
+
+    .bj-foursectionOspetrabg{
+        width: 180px;
+        transform: rotate(-90deg);
+        left: unset;
+        right: 0px;
+        bottom: unset;
+        /* opacity: 0.5; */
+        z-index: -1;
+    }
+
+    .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 {
+        padding-left: 35px;
+        padding-right: 0;
+    }
+
+    .bj-foursectionOspetrabox1 .about-list {
+        padding-bottom: 25px;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .bj-foursectionOspetraheadertxt {
+        font-size: 26px;
+        line-height: 36px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .bj-foursectionOspetraheadertxt {
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .bj-foursectionOspetrabox1 h5{
+        font-size: 18px;
+        line-height: 28px;
+        padding-bottom: 12px;
+    }
+
+    .bj-foursectionOspetrabox1 .about-list {
+        padding-bottom: 25px;
+        padding-right: 1.2rem;
+        padding-left: 1rem;
+    }
+
+    .bj-foursectionOspetrabox1 .about-list li {
+        line-height: 20px;
+    }
+
+    .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1{
+        padding-left: 0px;
+    }
+
+    .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 h5{
+        padding-left: 25px;
+    }
+
+    .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 div{
+        padding-left: 25px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    .bj-foursectionOspetrabox1 .about-list {
+        padding-bottom: 20px;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .bj-foursectionOspetrabox1 h5{
+        font-size: 15px;
+    }
+
+    .bj-foursectionOspetrabox{
+        flex-direction: column;
+    }
+
+    .bj-foursectionOspetrabox3{
+        border-bottom: 2px dotted #ddd;
+    }
+
+    .bj-foursectionOspetrabox4{
+        border-bottom: unset;
+    }
+}
+
+@media screen and (max-width:520px) {
+
+    .bj-foursectionOspetrabg {
+        width: 150px;
+    }
+    .bj-foursectionOspetraboxblock{
+        flex-direction: column;
+    }
+
+    .bj-foursectionOspetraboxlevel, .bj-foursectionOspetraboxright{
+        width: 100%;
+    }
+
+    .bj-foursectionOspetrabox1{
+        border-right:unset ;
+    }
+
+    .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 h5{
+        padding-left: 0;
+        line-height: 26px;
+    }
+
+    .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 div{
+        padding-left: 0;
+    }
+
+    .bj-foursectionOspetrabox1 h5 {
+        font-size: 16px;
+    }
+
+    .bj-foursectionOspetrabox1 .about-list li {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+}
+
+@media screen and (max-width:480px) {
+    .bj-foursectionOspetraheadertxt {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+}

@@ -1,0 +1,10 @@
+.bj-OspectraCareerBanner .bj-bannermainimage{
+    background-image: url("../Assets/images/AboutUs_Banner_Img.webp");
+}
+
+
+@media screen and (max-width:600px) {
+    .bj-OspectraCareerBanner .bj-bannermainimage{
+        background-image: url("../Assets/images/AboutUs_Banner_Mobile_Img.webp");
+    }   
+}

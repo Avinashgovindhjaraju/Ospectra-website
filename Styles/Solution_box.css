@@ -1,0 +1,240 @@
+.bjOspectraSolutionboxblock{
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: linear-gradient(to bottom, #fff 0%, #fff 20%, #EDE9FC 100%);
+}
+
+.bjOspectraSolutionboxlevel h3{
+    font-size: 36px;
+    text-align: center;
+    color: #421AD5;
+    margin-bottom: 80px;
+    font-family: "Roboto-Bold";
+}
+
+.bjOspectraSolutionboxwhiteblock{
+    width: 100%;
+}
+
+.bjOspectraSolutionboxwhitelevel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bjOspectraSolutionboxwhite{
+    width: 30%;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #5F44DA1A;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.bjOspectraSolutionboxwhite:nth-child(3), .bjOspectraSolutionboxwhite:nth-child(6){
+    margin-right: 0px;
+}
+
+.bjOspectraSolutionboxwhite:nth-child(4), .bjOspectraSolutionboxwhite:nth-child(5), .bjOspectraSolutionboxwhite:nth-child(6){
+    margin-bottom: 0;
+}
+
+.bjOspectraSolutionboxwhite div{
+    padding: 30px;
+    height: 100%;
+}
+
+.bjOspectraSolutionboxwhite h6{
+    font-size: 24px;
+    line-height: 32px;
+    font-family: "Roboto-Bold";
+    letter-spacing: 0px;
+    color: #421AD5;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.bjOspectraSolutionboxwhite p{
+    font-size: 18px;
+    line-height: 28px;
+    font-family: "Roboto";
+    color:#868d98;
+    font-weight: 400;
+    text-align: left;
+}
+
+@media screen and (max-width:1660px) {
+
+    .bjOspectraSolutionboxblock{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .bjOspectraSolutionboxlevel h3{
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .bjOspectraSolutionboxlevel h3{
+        font-size: 32px;
+        margin-bottom: 60px;
+    }
+
+    .bjOspectraSolutionboxwhite h6{
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 15px;
+        
+    }
+
+    .bjOspectraSolutionboxwhite p{
+        font-size: 15px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .bjOspectraSolutionboxlevel h3{
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    .bjOspectraSolutionboxwhite{
+        height: 260px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .bjOspectraSolutionboxwhite div{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width:990px) {
+
+    .bjOspectraSolutionboxblock{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .bjOspectraSolutionboxlevel h3{
+        font-size: 28px;
+    }
+
+    .bjOspectraSolutionboxwhite h6{
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 10px;
+    }
+
+    .bjOspectraSolutionboxwhite p{
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .bjOspectraSolutionboxlevel h3{
+        font-size: 26px;
+    }
+
+    .bjOspectraSolutionboxwhite h6{
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+
+    .bjOspectraSolutionboxwhite p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width:650px) {
+
+    .bjOspectraSolutionboxwhite{
+        height: 200px;
+    }
+
+    .bjOspectraSolutionboxwhite div {
+        padding: 15px;
+    }
+
+    .bjOspectraSolutionboxwhite{
+        width: 48%;
+        margin-right: 15px;
+    }    
+
+    .bjOspectraSolutionboxwhite:nth-child(2), .bjOspectraSolutionboxwhite:nth-child(4){
+        margin-right: 0;
+    }
+
+    .bjOspectraSolutionboxwhite:nth-child(4){
+        margin-bottom: 20px;
+    }
+
+    .bjOspectraSolutionboxwhite:nth-child(3){
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .bjOspectraSolutionboxwhite h6 {
+        line-height: 22px;
+        margin-bottom: 5px;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+
+    .bjOspectraSolutionboxlevel h3{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:450px) {
+
+    .bjOspectraSolutionboxwhite {
+        height: 200px;
+    }
+    
+    .bjOspectraSolutionboxwhite{
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .bjOspectraSolutionboxwhite:nth-child(3){
+        margin-right: 0px;
+    }
+
+    .bjOspectraSolutionboxwhite:nth-child(5){
+        margin-bottom: 20px;
+    }
+
+    .bjOspectraSolutionboxwhite div {
+        padding: 30px 20px;
+    }
+
+    .bjOspectraSolutionboxwhite h6{
+        line-height: 26px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:370px){
+    .bjOspectraSolutionboxwhite div{
+        padding: 25px 20px;
+    }   
+
+    .bjOspectraSolutionboxwhite div{
+        line-height: 24px;
+    }
+}

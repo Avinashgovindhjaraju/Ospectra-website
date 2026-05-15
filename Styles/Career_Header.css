@@ -1,0 +1,36 @@
+@media screen and (max-width:990px) {
+    .bj-OspectraCareerBanner .nav-menu {
+        height: 28%;
+    }
+}
+
+@media screen and (max-width:840px) {
+    .bj-OspectraCareerBanner .nav-menu {
+        height: 25%;
+    }
+}
+
+@media screen and (max-width:540px) {
+    .bj-OspectraCareerBanner .nav-menu {
+        height: 23%;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .bj-OspectraCareerBanner .nav-menu {
+        height: 18%;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .bj-OspectraCareerBanner .nav-menu {
+        height: 16%;
+    }
+}
+
+
+@media screen and (max-width:350px) {
+    .bj-OspectraCareerBanner .nav-menu {
+        height: 14%;
+    }
+}

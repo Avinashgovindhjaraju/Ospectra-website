@@ -1,0 +1,32 @@
+
+.bj-platformFlowDiagramblock{
+    margin-bottom: 100px;
+}
+
+.bj-platformFlowDiagrambox{
+    width: 90%;
+}
+
+@media screen and (max-width:1660px) {
+    .bj-platformFlowDiagramblock{
+        margin-bottom: 80px;
+    }   
+}
+
+@media screen and (max-width:1440px) {
+    .bj-platformFlowDiagrambox{
+        width: 90%;
+    }   
+}
+
+@media screen and (max-width:990px) {
+    .bj-platformFlowDiagramblock{
+        margin-bottom: 50px;
+    }   
+}
+
+@media screen and (max-width:768px) {
+    .bj-platformFlowDiagrambox{
+        width: 100%;
+    }
+}

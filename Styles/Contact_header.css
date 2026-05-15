@@ -1,0 +1,27 @@
+/* .bj-OspectraContactBanner  .nav-menu {
+        height: 35%;
+} */
+
+@media screen and (max-width:990px) {
+    .bj-OspectraContactBanner .nav-menu {
+        height: 42%;
+    }
+}
+
+@media screen and (max-width:820px) {
+    .bj-OspectraContactBanner .nav-menu {
+        height: 30%;
+    }
+}
+
+@media screen and (max-width:520px) {
+    .bj-OspectraContactBanner .nav-menu {
+        height: 32%;
+    }
+}
+
+@media screen and (max-width:380px) {
+    .bj-OspectraContactBanner .nav-menu {
+        height: 34%;
+    }
+}

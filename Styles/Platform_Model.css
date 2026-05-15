@@ -1,0 +1,293 @@
+.bj-platform_Modelblock{
+    width:100%;
+    margin-bottom: 100px;
+}
+
+.bj-platform_Modelblock .bj-platform_Modellevel{
+    width: 85%;
+}
+
+.bj-platform_Modelboxblock{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+    border-bottom: 1px dashed #ddd;
+    position: relative;
+}
+
+.bj-platform_Modelboxblock .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+    width: 250px;
+    position: absolute;
+    right: -200px;
+    z-index: -1;
+    bottom: 170px;
+}
+
+.bj-platform_Modelbox{
+    width: 50%;
+}
+.bj-platform_Modelboxlogo {
+    width: 320px;
+}
+
+.bj-platform_Modelbox .bj-secondAgenetic{
+    width: 80%;
+    height: 100%;
+}
+
+.bj-platform_Modelbox .bj-secondAgenetic .bj-secondAgenetictext{
+    padding-top: 10px;
+}
+
+.bj-platform_Modelbox .bj-secondAgenetic .bj-secondAgenetictext p:last-child{
+    margin-bottom: 0;
+}
+
+/* .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock{
+    width: 90%;
+} */
+
+.bj-platform_Modelboxlevel{
+    width: 100%;
+    position: relative;
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-AboutAgenticCriclelogo{
+    width: 250px;
+    position: absolute;
+    left: -100px;
+    z-index: -1;
+    bottom: -30px;
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock{
+    margin-top: 60px;
+}
+
+/* .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 .about-list{
+    padding-left: 0;
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 .about-list li{
+    padding-left: 0;
+} */
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 .about-list {
+    li {
+        list-style-image: none;
+        padding-left: 0px;
+    }
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 .about-list {
+    padding-left: 0;
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxlevel .bj-foursectionOspetrabox1 .about-list{
+    padding-left: 0;
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxlevel .bj-foursectionOspetrabox1 .about-list li{
+    padding-left: 0;
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxlevel .bj-foursectionOspetrabox1 .about-list {
+    li {
+        list-style-image: none;
+        padding-left: 0px;
+    }
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1{
+    padding-left: 0px;
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 h5{
+    padding-left: 80px;
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 div{
+    padding-left: 80px;
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox4{
+    border-left: 2px dotted #ddd;    
+}
+
+
+@media screen and (max-width:1660px) {
+
+    .bj-platform_Modelblock {
+        margin-bottom: 80px;
+    }
+
+    .bj-platform_Modelboxblock .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        right: -100px;
+        bottom: -10px;
+    }
+
+    .bj-platform_Modelboxlogo {
+        width: 450px;
+    }
+
+    .bj-platform_Modelboxblock{
+        padding-bottom: 60px;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 .about-list{
+        padding-right: 5rem;
+    }
+    
+}
+
+@media screen and (max-width:1440px) {
+    .bj-platform_Modelboxlogo {
+        width: 400px;
+    }
+
+    .bj-platform_Modelbox .bj-secondAgenetic .bj-secondAgenetictext{
+        padding-top: 30px;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 h5{
+        padding-left: 50px;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 div{
+        padding-left: 50px;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 .about-list {
+        padding-right: 0rem;
+    }
+}
+
+@media screen and (max-width:1366px) {
+    .bj-platform_Modelboxblock .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        width: 200px;
+        right: -100px;
+        bottom: -50px;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-AboutAgenticCriclelogo{  
+        width: 200px;
+        left: -180px;
+        bottom: -20px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock{
+        margin-top: 40px;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modellevel{
+        width: 100%;
+    }
+
+    .bj-platform_Modelboxblock .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        display: none;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-AboutAgenticCriclelogo{
+        display: none;
+    }
+}
+
+@media screen and (max-width:990px) {
+
+    .bj-platform_Modelblock{
+        margin-bottom: 50px;
+    }
+
+    .bj-platform_Modelboxblock .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        width: 150px;
+        right: -50px;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-AboutAgenticCriclelogo{  
+        width: 150px;
+        left: -20px;
+        bottom: -20px;
+    }
+
+    .bj-platform_Modelboxlogo {
+        width: 300px;
+    }
+
+    .bj-platform_Modelbox .bj-secondAgenetic{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .bj-platform_Modelboxlogo {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:680px) {
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 h5{
+        padding-left: 30px;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 div{
+        padding-left: 30px;
+    }    
+}
+
+@media screen and (max-width:650px) {
+    .bj-platform_Modelboxblock{
+        padding-bottom: 50px;
+        flex-direction: column;
+    }
+
+    .bj-platform_Modelbox{
+        width: 100%;
+    }
+
+    .bj-platform_Modelbox .bj-secondAgenetic{
+        width: 100%;
+    }
+
+    .bj-platform_Modelboxblock {
+        padding-bottom: 30px;
+        flex-direction: column;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock{
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width:520px) {
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock{
+        flex-direction: column;
+    }
+    
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox4{
+        border-left: unset;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 h5{
+        padding-left: 0;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 div{
+        padding-left: 0;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxlevel .bj-foursectionOspetrabox3{
+        border-bottom: 2px dotted #ddd;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-AboutAgenticCriclelogo{  
+        width: 150px;
+        left: unset;
+        right: -60px;
+        bottom: -80px;
+    }
+}

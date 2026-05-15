@@ -1,0 +1,461 @@
+
+.bj-secondAgeneticblock{
+    width: 100%;
+    height: 650px;
+    margin-top: 100px;
+}
+
+.bj-secondAgeneticlevel{
+    width: 93%;
+    height: 650px;
+    justify-content: space-between;
+}
+
+.bj-secondAgeneticleft{
+    width: 55%;
+    height: 100%;  
+    display: flex;
+    position: relative;
+}
+
+.bj-secondblockoneimg, .bj-secondblocksecondimg, .bj-secondblockthreeimg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.bj-secondblockone{
+    width: 450px;
+    height: auto;
+    position: absolute;
+    left: 168px;
+    top: 30px;
+}
+
+.bj-secondblocksecond{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+}
+
+.bj-secondblockthree{
+    width: 250px;
+    height: auto;
+    position: inherit;
+    right: 20px;
+    bottom: 40px;
+}
+
+.bj-secondblockthreeimg object{
+    width: 100%;
+}
+
+.bj-secondAgeneticright{
+    width: 43%;
+    height: 100%;
+}
+
+.bj-secondOspectra{
+    width: 150px;
+    padding: 12px 10px;
+    color: #421AD5;
+    background: rgba(137, 110, 235, 0.15);
+    border-radius: 0px 20px 20px 20px;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 22px;
+    font-family: "Montserrat-Bold";
+}
+
+.bj-secondAgenetic h3{
+    font-size: 36px;
+    line-height: 46px;
+    color: #421AD5;
+    font-weight: 500;
+    font-family: "Roboto";
+    margin-bottom: 30px;
+}
+
+.bj-secondAgenetic h3 span{
+    font-family: "Roboto-Bold";
+}
+
+.bj-secondAgenetic p{
+    font-size: 18px;
+    line-height: 28px;
+    color: #868d98;
+    font-family: "Roboto";
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.about-list {
+    padding-left: 2rem;
+    color: #868d98;
+    font-family: "Roboto";
+    font-weight: 400;
+}
+
+.about-list {
+    li {
+        list-style-image: url('../Assets/images/bullet_purple.svg');
+        padding-left: 10px;
+        line-height: 26px;
+    }
+}
+
+@media screen and (max-width:1660px) {
+
+    .bj-secondAgeneticblock{
+        margin-top: 80px;
+    }
+
+    .bj-secondAgenetic h3{
+        font-size: 34px;
+        line-height: 44px;
+    }
+
+    .bj-secondAgenetic p{
+        font-size: 16px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+
+    .bj-secondAgeneticblock{
+        height: 540px;
+    }
+
+    .bj-secondAgeneticlevel{
+        height: 540px;
+    }
+
+    .bj-secondblockone {
+        width: 380px;
+    }
+
+    .bj-secondblocksecond {
+        width: 310px;
+        bottom: 0px;
+    }
+
+    .bj-secondblockthree {
+        width: 200px;
+        right: 0;
+        bottom: 35px;
+    }
+
+    .bj-secondAgenetic h3{
+        font-size: 32px;
+        line-height: 42px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+
+    .bj-secondAgeneticlevel{
+        width: 100%;
+    }
+
+    .bj-secondblockone {
+        width: 330px;
+        left: 145px;
+    }
+
+    .bj-secondblocksecond {
+        width: 280px;
+        bottom: 0px;
+    }
+
+    .bj-secondblockthree {
+        width: 180px;
+        right: 50px;
+        bottom: 85px;
+    }
+
+    .bj-secondOspectra{
+        width: 130px;
+        font-size: 10px;
+        margin-bottom: 15px;
+        padding: 10px 15px;
+    }
+
+    .bj-secondAgenetic h3{
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .bj-secondAgenetic p{
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 18px;
+    }
+
+    .about-list li{
+        font-size: 14px;
+        line-height: 26px;
+    }
+    
+}
+
+@media screen and (max-width:1024px) {
+
+    .bj-secondAgeneticblock {
+        height: 420px;
+    }
+    
+    .bj-secondAgeneticlevel{
+        height: 420px;
+    }
+
+    .bj-secondblockone{
+        width: 280px;
+        top: 60px;
+        left: 155px;
+    }
+
+    .bj-secondblocksecond {
+        width: 230px;
+        bottom: 0px;
+        left: 35px;
+    }
+
+    .bj-secondblockthree{
+        width: 145px;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+}
+
+@media screen and (max-width:990px) {
+    .bj-secondAgeneticblock{
+        margin-top: 50px;
+    }
+
+    .bj-secondblockone {
+        width: 240px;
+        top: 60px;
+        left: 175px;
+    }
+
+    .bj-secondblocksecond {
+        width: 200px;
+        bottom: 0px;
+        left: 70px;
+    }
+
+    .bj-secondblockthree {
+        width: 130px;
+        right: 40px;
+        bottom: 60px;
+    }
+    
+    .bj-secondAgenetic h3 {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .bj-secondAgenetic p {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 15px;
+    }
+
+    li::marker{
+        width: 6px;
+    }
+}
+
+@media screen and (max-width:850px) {
+
+    .bj-secondAgeneticlevel {
+        height: 420px;
+    }
+
+    .bj-secondblockone {
+        width: 240px;
+        top: 60px;
+        left: 120px;
+    }
+
+    .bj-secondblocksecond {
+        width: 190px;
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .bj-secondblockthree {
+        width: 110px;
+        right: 20px;
+        bottom: 60px;
+    }
+
+    .bj-secondAgenetic h3{
+        line-height: 34px;
+        margin-bottom: 10px;
+    }
+
+    .about-list{
+        padding-left: 1.5rem;
+    }
+
+    .about-list li {
+        font-size: 12px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .bj-secondAgeneticblock{
+        height: unset;
+    }
+
+    .bj-secondAgeneticlevel{
+        flex-direction: column;
+        height: unset;
+    }
+
+    .bj-secondAgeneticleft{
+        width: 100%;
+        height: 430px;
+    }
+
+    .bj-secondblockone{
+        width: 250px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .bj-secondblocksecond {
+        width: 200px;
+        left: 23%;
+        transform: translate(-28%, -5%);
+        bottom: 6%;
+    }
+
+    .bj-secondblockthree{
+        width: 160px;
+        /* left: 28%; */
+        right: 20%;
+        transform: translate(-23%, -0%);
+        /* bottom: 23%; */
+    }
+
+    .bj-secondAgeneticright{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:650px) {
+
+    .bj-secondblockone{
+        top: 30px;
+    }
+
+    .bj-secondblocksecond{
+        left: 20%;
+        bottom: 15%;
+    }
+
+    .bj-secondblockthree{
+        right: 12%;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .bj-secondblockthree{
+        right: 3%;
+    }
+    
+    .bj-secondAgeneticleft {
+        width: 100%;
+        height: 400px;
+    }
+
+    .bj-secondblockone{
+        top: 15px;
+    }
+
+    .bj-secondblocksecond {
+        left: 17%;
+        bottom: 8%;
+    }
+
+    .bj-secondblockthree{
+        width: 140px;
+        right: 10%;
+        bottom: 65px;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .bj-secondAgeneticlevel{
+        flex-direction: column-reverse;
+    }
+
+    .bj-secondblockone{
+        top: 50px;
+        width: 220px;
+        left: 60%;
+        transform: translate(-60%);
+    }
+
+    .bj-secondblocksecond{
+        width: 170px;
+        left: 20%;
+        bottom: 10%;
+    }
+
+    .bj-secondblockthree {
+        width: 120px;
+        right: 3%;
+        bottom: 70px;
+    }
+
+    .bj-secondAgenetic h3{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:380px){
+
+    .bj-secondAgeneticleft{
+        height: 365px;
+    }
+
+    .bj-secondblockone{
+        width: 200px;
+        left: 65%;
+        transform: translate(-65%);
+    }
+    
+    .bj-secondblocksecond{
+        left: 15%;
+    }
+
+    .bj-secondblockthree{
+        width: 100px;
+        right: -5px;
+        bottom: 70px;
+    }
+}
+
+@media screen and (max-width:320px) {
+
+    .bj-secondblocksecond{
+        width: 150px;
+    }
+
+    .bj-secondblockthree{
+        right: -25px;
+        bottom: 65px;
+    }
+}

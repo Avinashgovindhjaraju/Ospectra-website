@@ -1,0 +1,147 @@
+.bj-CareerAgenticblock{
+    margin-top: 100px;
+    margin-bottom: 0px;
+}
+
+.bj-CareerAgenticblock .bj-foursectionOspetrabox1 .about-list{
+    padding-right: 5rem;
+}
+
+.bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-AboutAgenticCriclelogo{
+    left: -18%;
+}
+
+.bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxlevel .bj-foursectionOspetrabox2{
+    padding-top: 40px;
+}
+
+.bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxlevel .bj-foursectionOspetrabox4{
+    border-bottom: unset;
+}
+
+.bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox4{
+    border-bottom: unset;
+}
+
+.bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox4{
+    border-left: unset;
+}
+
+.bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1{
+    padding-left: 80px;
+}
+
+.bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 h5{
+    padding-left: 0px;
+}
+
+.bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1 div{
+    padding-left: 0px;
+}
+
+@media screen and (max-width:1660px) {
+    .bj-CareerAgenticblock{
+        margin-top: 80px;
+        margin-bottom: 0px;
+    }
+
+    .bj-CareerAgenticblock .bj-foursectionOspetrabox1 .about-list{
+        padding-right: 2rem;
+    }
+
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-AboutAgenticCriclelogo{
+        left: -10%;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .bj-CareerAgenticblock .bj-platform_Modellevel .bj-secondAgenetic h3{
+        margin-bottom: 15px;
+    }
+
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock{
+        margin-top: 30px;
+    }
+
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-AboutAgenticCriclelogo{
+        left: -20%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxlevel .bj-foursectionOspetrabox2{
+        padding-top: 20px;
+    }
+
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-AboutAgenticCriclelogo{
+        left: -5%;
+    }
+
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-AboutAgenticCriclelogo{
+        display: none;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .bj-CareerAgenticblock{
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+
+    .bj-CareerAgenticblock .bj-platform_Modellevel .bj-secondAgenetic p{
+        margin-bottom: 0;    
+    }
+
+    .bj-CareerAgenticblock .bj-secondAgenetic h3{
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1{
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1{
+        padding-left: 30px;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock{
+        margin-top: 10px;
+    }
+
+    .bj-CareerAgenticblock .bj-foursectionOspetrabox1 .about-list {
+        padding-right: 1rem;
+    }
+
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-AboutAgenticCriclelogo{
+        right: unset;
+        bottom: -20px;
+    }
+
+}
+
+@media screen and (max-width:520px) {
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxlevel .bj-foursectionOspetrabox4{
+        border-bottom: 2px dotted #ddd;
+    }
+
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxlevel .bj-foursectionOspetrabox2{
+        padding-top: 30px;
+    }
+
+    .bj-platform_Modelblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1{
+        padding-top: 30px;
+    }
+
+    .bj-CareerAgenticblock .bj-foursectionOspetrabox1 .about-list {
+        padding-right: 2rem;
+    }
+
+    .bj-CareerAgenticblock .bj-platform_Modelboxlevel .bj-foursectionOspetraboxblock .bj-foursectionOspetraboxright .bj-foursectionOspetrabox1{
+        padding-left: 0px;
+    }
+}

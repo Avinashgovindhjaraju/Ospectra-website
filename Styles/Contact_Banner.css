@@ -1,0 +1,25 @@
+.bj-OspectraContactBanner{
+    margin-bottom: 100px;
+}
+
+.bj-OspectraContactBanner .bj-bannermainimage{
+    background-image: url("../Assets/images/ContactUs_Banner.webp");
+}
+
+@media screen and (max-width:600px) {
+    .bj-OspectraContactBanner .bj-bannermainimage{
+        background-image: url("../Assets/images/ContactUs_Banner_Mobile_Img.webp");
+    }   
+}
+
+@media screen and (max-width:1660px) {
+    .bj-OspectraContactBanner{
+        margin-bottom: 80px;
+    }   
+}
+
+@media screen and (max-width:990px) {
+    .bj-OspectraContactBanner{
+        margin-bottom: 50px;
+    }   
+}

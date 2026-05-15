@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40.305" height="40" viewBox="0 0 40.305 40">
+  <g id="StarFull_Icon" transform="translate(-102 -102)">
+    <g id="Bg" transform="translate(102 102)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="40" height="40" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" fill="none"/>
+    </g>
+    <path id="Polygon_5" data-name="Polygon 5" d="M17,0l5.95,9.257L34,11.806l-7.373,8.271.881,10.833-10.52-4.147L6.469,30.91l.879-10.833L0,11.806,11.05,9.257Z" transform="translate(105.5 106.5)" fill="#494ae8" stroke="#494ae8" stroke-width="3"/>
+  </g>
+</svg>

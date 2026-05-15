@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="CircleUpArrow_Icon" transform="translate(-102 -102)">
+    <g id="Bg" transform="translate(102 102)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="40" height="40" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" fill="none"/>
+    </g>
+    <g id="Group_154703" data-name="Group 154703" transform="translate(102 102)">
+      <circle id="Ellipse_65" data-name="Ellipse 65" cx="20" cy="20" r="20" fill="#343580"/>
+      <path id="back" d="M5.707,10.076.38,15.373A1.288,1.288,0,1,0,2.2,17.2l5.711-5.677a3.854,3.854,0,0,0,0-5.473L2.2.374A1.288,1.288,0,1,0,.383,2.2L5.707,7.5C6.589,8.579,6.933,8.809,5.707,10.076Z" transform="translate(11.212 24.524) rotate(-90)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

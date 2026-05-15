@@ -1,0 +1,269 @@
+
+.bj-OspectraBlogBanner .bj-bannermainimage {
+    background-image: url("../Assets/images/Blog1.png");
+    background-position: center;
+    border-radius: 20px 20px 200px 20px;
+}
+
+.bj-OspectraPlatformBanner .bj-bannermainlogo{
+    border-radius: 20px 20px 200px 20px;
+}
+
+.bj-Blogbannerblock{
+    width: 100%;
+    height: 350px;
+    /* -webkit-transition: all 350ms cubic-bezier(.37,0,.63,1); */
+    /* transition: all 350ms cubic-bezier(.37,0,.63,1); */
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -100px;
+}
+
+.bj-Blogbannerlevel{
+    width: 56%;
+    height: 100%;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 20px #0000001A;
+    border-radius: 20px;
+    position: relative;
+}
+
+.bj-Blogbannerbox{
+    width: auto;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bj-OspectraBlogBanner .bj-foursectionOspetraheader{
+    width: auto;
+}
+
+.bj-OspectraBlogBanner .bj-foursectionOspetraheadertxt{
+    text-align: center;
+}
+
+.bj-Blogbannerlevel p{
+    text-align: center;
+    color: #868d98;
+    font-family: "Roboto";
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.bj-Blogbannerlevel p span{
+    color: #000;
+}
+
+.bj-blogbannercriclebgblock{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    background-color: #fff;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.bj-blogbannercriclebg{
+    width: 100%;
+    height: 100%;
+    border-width: 8px !important;
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+}
+
+.bj-blogbannercriclebg img{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:1660px) {
+    .bj-Blogbannerlevel h6{
+        font-size: 28px;
+        line-height: 38px;
+        margin-bottom: 15px;
+    }   
+
+    .bj-Blogbannerblock{
+        height: 300px;
+    }
+
+    .bj-Blogbannerllevel{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:1440px) {
+
+    .bj-Blogbannerblock{
+        height: 280px;
+    }
+
+    .bj-Blogbannerlevel{
+        width: 50%;
+    }
+
+    .bj-Blogbannerlevel h6{
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .bj-Blogbannerlevel p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .bj-Blogbannerblock {
+        height: 250px;
+    }
+
+    .bj-Blogbannerlevel h6{
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .bj-blogbannercriclebgblock{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .bj-OspectraBlogBanner .bj-bannermainimage{
+        border-radius: 20px 20px 150px 20px;
+    }
+
+    .bj-OspectraPlatformBanner .bj-bannermainlogo {
+        border-radius: 20px 20px 150px 20px;
+    }
+
+    .bj-Blogbannerlevel{
+        width: 55%;
+    }
+
+    .bj-Blogbannerlevel h6{
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .bj-Blogbannerlevel p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:850px) {
+
+    .bj-OspectraBlogBanner .bj-bannermainimage{
+        border-radius: 20px 20px 100px 20px;
+    }
+
+    .bj-OspectraPlatformBanner .bj-bannermainlogo {
+        border-radius: 20px 20px 100px 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    .bj-Blogbannerblock {
+        height: 220px;
+        top: -80px;
+    }
+
+    .bj-Blogbannerlevel{
+        width: 60%;
+    }
+
+    .bj-OspectraBlogBanner .bj-bannermainimage{
+        border-radius: 20px 20px 80px 20px;
+    }
+
+    .bj-OspectraPlatformBanner .bj-bannermainlogo {
+        border-radius: 20px 20px 80px 20px;
+    }
+
+    .bj-OspectraBlogBanner .bj-foursectionOspetraheader{
+        padding: 8px 15px;
+    }
+
+    .bj-Blogbannerlevel p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:660px) {
+
+    .bj-Blogbannerlevel {
+        width: 70%;
+    }
+
+    .bj-blogbannercriclebgblock {
+        width: 90px;
+        height: 90px;
+        bottom: -40px;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .bj-OspectraBlogBanner .bj-bannermainimage {
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    .bj-OspectraPlatformBanner .bj-bannermainlogo {
+        border-radius: 20px 20px 20px 20px;
+    }
+
+    .bj-Blogbannerlevel{
+        width: 75%;
+    }
+
+    .bj-blogbannercriclebgblock {
+        width: 80px;
+        height: 80px;
+        bottom: -40px;
+    }
+
+    .bj-Blogbannerlevel h6{
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .bj-Blogbannerblock {
+        top: -60px;
+    }
+
+    .bj-Blogbannerlevel {
+        width: 80%;
+    }
+
+    .bj-OspectraBlogBanner .bj-foursectionOspetraheader{
+        font-size: 8px;
+    }
+}
+
+@media screen and (max-width:350px) {
+
+    .bj-Blogbannerblock {
+        height: 200px;
+        
+    }
+
+    .bj-Blogbannerbox{
+        padding: 25px;
+    }
+
+    .bj-Blogbannerlevel h6{
+        font-size: 20px;
+        line-height: 26px;
+    }
+}

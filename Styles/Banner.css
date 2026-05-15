@@ -1,0 +1,195 @@
+main{
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.bj-bannermainimageblock{
+    width: 100%;
+    height: 100%;
+}
+
+.bj-bannermainimage{
+    width: 100%;
+    height: 100%;
+    background-image: url("../Assets/images/HomeBanner.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bj-bannermainlogo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url("../Assets/images/HomeBanner_Overlay.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bj-bannerlefttext{
+    width:485px;
+    position: absolute;
+    bottom: 100px;
+    margin-left: 80px;
+}
+
+.bj-bannerlefttext h3{
+    font-size: 36px;
+    line-height: 45px;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: "Montserrat-Regular";
+}
+
+.bj-bannerlefttext h3 span{
+    font-family: "Montserrat-Bold";
+}
+
+.bj-bannerlefttext button{
+    padding: 10px 10px 10px 25px;
+    background: #5A3ED9 0% 0% no-repeat padding-box;
+    color: #fff;
+    border-radius: 0px 50px 50px 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.bj-bannerlefttext button p{
+    font-size: 14px;
+    font-family: "Montserrat-Regular";
+    margin-right: 10px;
+}
+
+.bj-bannerleftarrow{
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width:1660px){
+    .bj-bannerlefttext h3{
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+}
+
+@media screen and (max-width:1440px) {
+
+    main{
+        height: 600px;
+    }
+
+    .bj-bannerlefttext h3{
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    .bj-bannerlefttext button{
+        padding: 10px 15px;
+    }
+
+    .bj-bannerleftarrow{
+        width: 30px;
+        height: 30px;
+    }
+    
+}
+
+@media screen and (max-width:1200px) {
+
+    .bj-bannerlefttext{
+        margin-left: 50px;
+    }
+
+    .bj-bannerlefttext button p{
+        font-size: 12px;
+    }
+
+    .bj-bannerleftarrow {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    main {
+        height: 460px;
+    }
+
+    .bj-bannerlefttext h3{
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .bj-bannermainimage{
+        background-image: url("../Assets/images/HomeBanner_Mobile.webp");
+    }
+
+    .bj-bannermainlogo{
+        background-image: url("../Assets/images/HomeBanner_Overlay_Mobile.svg");
+    }
+
+    .bj-bannerlefttext{
+        width: 90%;
+        margin-left: 40px;
+        bottom: 60px;
+    }
+
+    .bj-bannerlefttext h3{
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .bj-bannerleftarrow {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:520px) {
+    main {
+        height: 430px;
+    }
+}
+
+@media screen and (max-width:480px){
+
+    main {
+        height: 500px;
+    }
+
+    .bj-bannerlefttext{
+        margin-left: 25px;
+    }
+
+    .bj-bannerlefttext h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width:450px){
+    main {
+        height: 480px;
+    }
+}
+
+@media screen and (max-width:380px){
+    main {
+        height: 400px;
+    }   
+
+}
+
+@media screen and (max-width:350px) {
+    .bj-bannerlefttext {
+        margin-left: 20px;
+    }
+}

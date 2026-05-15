@@ -1,0 +1,9 @@
+.bj-OspectraSolutionsBanner .bj-bannermainimage{
+    background-image: url("../Assets/images/Solution_Banner_img.webp");
+}
+
+@media screen and (max-width:600px) {
+    .bj-OspectraSolutionsBanner .bj-bannermainimage{
+        background-image: url("../Assets/images/Solution_Banner_Mobile_img.webp");
+    }   
+}

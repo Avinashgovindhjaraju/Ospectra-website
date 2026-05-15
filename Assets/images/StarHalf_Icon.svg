@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40.305" height="40" viewBox="0 0 40.305 40">
+  <g id="StarHalf_Icon" transform="translate(-102 -102)">
+    <g id="Bg" transform="translate(102 102)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="40" height="40" stroke="none"/>
+      <rect x="0.5" y="0.5" width="39" height="39" fill="none"/>
+    </g>
+    <path id="Path_183430" data-name="Path 183430" d="M-1477.532-1460.59v0l.879-10.832-7.348-8.271,11.05-2.548,5.95-9.257v26.767l-.012,0-10.519,4.147Z" transform="translate(1589.5 1598)" fill="#494ae8"/>
+    <path id="Polygon_5_-_Outline" data-name="Polygon 5 - Outline" d="M17-2.774,23.881,7.933l12.924,2.98L28.174,20.6,29.2,33.188l-12.21-4.814L4.779,33.188,5.8,20.594l-8.6-9.682L10.119,7.933ZM31.195,12.7l-9.177-2.116L17,2.774l-5.018,7.807L2.8,12.7l6.094,6.86-.736,9.072,8.83-3.481,8.829,3.481-.738-9.073Z" transform="translate(105.5 106.5)" fill="#494ae8"/>
+  </g>
+</svg>

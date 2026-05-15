@@ -1,0 +1,195 @@
+.bj-SolutionsAgenticblock{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.bj-SolutionsAgenticblock{
+    height: unset;
+}
+
+.bj-SolutionsAgenticblock .bj-secondAgeneticlevel{
+    height: auto;
+}
+
+
+.bj-SolutionsAgenticblock .bj-secondAgeneticlevel .bj-secondAgeneticleft{
+    height: unset;
+}
+
+.bj-SolutionsAgenticblock .bj-secondAgeneticlevel .bj-secondAgeneticright{
+    height: unset;
+}
+
+.bj-SolutionsAgenticblock .bj-secondblockoneimg, .bj-secondblocksecondimg, .bj-secondblockthreeimg{
+    height: unset;
+}
+
+.bj-SolutionsAgenticblock .bj-secondblockoneimg, .bj-secondblocksecondimg, .bj-secondblockthreeimg .bj-secondblockone{
+    position: relative;
+}
+
+.bj-SolutionsAgenticblock .bj-secondAgeneticsecondbox .bj-secondAgeneticright .bj-secondAgenetic{
+    padding-left: 50px;
+}
+
+.bj-secondAgeneticsecondbox{
+    margin-top: 80px;    
+}
+
+.bj-secondAgeneticsecondbox .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+    right: unset;
+    left: -250px;
+    bottom: -50px;
+}
+
+
+@media screen and (max-width:1660px) {
+    .bj-SolutionsAgenticblock{
+        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+    
+    .bj-secondAgeneticsecondbox .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        top: unset;
+        right: unset;
+        left: -150px;
+        bottom: -100px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .bj-secondAgeneticsecondbox .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        top: unset;
+        right: unset;
+        left: -180px;
+        bottom: -100px;
+        transform: rotate(90deg);
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .bj-secondAgeneticsecondbox{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .bj-SolutionsAgenticblock .bj-secondAgeneticsecondbox .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:990px) {
+    .bj-SolutionsAgenticblock{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }   
+
+    .bj-secondAgeneticsecondbox .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        top: unset;
+        right: unset;
+        left: -50px;
+        bottom: -50px;
+        transform: rotate(90deg);
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticlevel{
+        width: 100%;   
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticleft{
+        width: 45%;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticright{
+        width: 55%;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticright .bj-secondAgenetic{
+        padding-left: 20px;
+    }
+
+    .bj-secondAgeneticsecondbox{
+        margin-top: 30px;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticleft .bj-secondblockoneimg {
+        justify-content: center;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticsecondbox .bj-secondAgeneticright .bj-secondAgenetic{
+        padding-left: 25px;
+    }
+
+    .bj-SolutionsAgenticblock .bj-OspectraAbout .bj-secondAgenetic p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .bj-SolutionsAgenticblock .bj-secondAgeneticlevel{
+        flex-direction: row;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticright .bj-secondAgenetic{
+        padding-left: 30px;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticsecondbox .bj-secondAgeneticright .bj-secondAgenetic{
+        padding-left: 0;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .bj-SolutionsAgenticblock .bj-secondAgeneticlevel {
+        flex-direction: column;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticleft{
+        width: 100%;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticright{
+        width: 100%;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticright .bj-secondAgenetic{
+        padding-left: 0;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticsecondbox {
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width:480px) {
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticlevel{
+        flex-direction: column-reverse;
+    }
+
+    .bj-SolutionsAgenticblock .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        width: 180px;
+        top: -120px;
+        right: -90px;
+        bottom: unset;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticsecondbox .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        top: unset;
+        bottom: -50px;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticleft{
+        margin-bottom: 0;
+    }
+
+    .bj-SolutionsAgenticblock .bj-secondAgeneticsecondbox{
+        flex-direction: column;
+    }
+}
+

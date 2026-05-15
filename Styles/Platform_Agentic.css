@@ -1,0 +1,73 @@
+.bj-platformAgenticblock .bj-OspectraAbout p{
+    margin-top: 30px;
+}
+
+.bj-platformAgenticblock .bj-secondAgeneticlevel{
+    position: unset;
+    display: flex;
+}
+
+.bj-AboutAgenticblock .bj-secondAgeneticright .bj-secondOspectra{
+    width: 200px;
+}
+
+.bj-platformAgenticblock .bj-OspectraAbout{
+    position: relative;
+}
+
+.bj-platformAgenticblock .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+    right: unset;
+    left: -150px;
+    bottom: -95px;
+}
+
+
+@media screen and (max-width:1440px) {
+    .bj-platformAgenticblock .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        bottom: -80px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+
+    .bj-AboutAgenticblock .bj-secondAgeneticright .bj-secondOspectra{
+        width: 180px;
+    }
+
+    .bj-platformAgenticblock .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        width: 200px;
+        left: -100px;
+        top: unset;
+        transform: rotate(90deg);
+        display: none;
+    }
+}
+
+@media screen and (max-width:990px) {
+    
+    .bj-AboutAgenticblock .bj-secondAgeneticleft .bj-secondblockoneimg{
+        justify-content: center;
+    }
+
+    .bj-AboutAgenticblock .bj-AboutAgenticCricleblock .bj-AboutAgenticCriclelogo{
+        width: 150px;
+        left: -50px;
+        bottom: -50px;
+    }    
+
+    .bj-AboutAgenticblock .bj-AboutAgenticCriclelogo{
+        opacity: 0.9;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .bj-platformAgenticblock .bj-secondAgeneticlevel{
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .bj-platformAgenticblock .bj-secondAgeneticlevel{
+        flex-direction: column;
+    }
+}

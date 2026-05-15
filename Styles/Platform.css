@@ -1,0 +1,714 @@
+.bj-platformbgblock{
+    width: 100%;
+    height: 100%;
+    margin-top: 100px;
+    background-color: #f6f4fd;
+    position: relative;
+}
+
+.bj-platformbglevel{
+    width: 100%;
+    height: 100%;
+}
+
+.bj-platformbglevel h3{
+    font-size: 40px;
+    font-family: "Roboto";
+    font-weight: 400;
+    color: #421AD5;
+    text-align: center;
+}
+
+.bj-platformbglevel{
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.bj-platformbglevel h3 span{
+    font-weight: bold;
+}
+
+.bj-platformboxblock{
+    width: 100%;
+    height: 500px;
+    margin-top: 80px;
+    display: flex;
+    align-items: flex-start;
+    overflow:  hidden ;
+}
+
+.bj-platformboxone{
+    width: 30%;
+    height: 100%;
+}
+
+.bj-platformboxlevel{
+    width: 70%;
+    height: 100%;
+    font-family: "Roboto";
+    overflow:  scroll;
+    scroll-behavior: smooth;
+    display: inline-block;
+}
+
+.bj-worktextmetaboxlevel{
+    width:100%;
+    height: 100%;
+}
+
+.slick-initialized .slick-slide{
+    border: none;
+    outline: none;
+}
+
+.bj-platformbox1{
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    /* overflow-y: scroll; */
+    display: inline-flex !important;
+    transition: all 0.5s ease; /* Smooth height transition */
+    margin-bottom: 20px;
+}
+
+.bj-platformboxtwo, .bj-platformboxthree{
+    width:50%;
+    height: 100%;
+}
+
+.bj-platformboxtwo{
+    align-items: flex-start;
+}
+
+.bj-platformboxlogblock{
+    width: 350px;
+}
+
+.bj-platformboxlog{
+    width: 100%;
+}
+
+.bj-platformboxonelist{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+    overflow-x: scroll;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+.bj-platformboxoneleftbtnblock, .bj-platformboxonerightbtnblock {
+    display: none;
+}
+
+.bj-platformboxonelist-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    width: 100%; /* or set a fixed width */
+}
+
+.menu-item{
+    display: inline-block;
+    white-space: nowrap;
+    flex: 0 0 auto;
+    font-size: 20px;
+    padding-bottom: 15px;
+    transition: opacity 0.3s ease;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0); /* Default position */
+    flex-shrink: 0;
+    /* position: absolute; */
+}
+
+.bj-platformboxoneleft, .bj-platformboxoneright{
+       display: none;
+}
+
+.bj-platformboxonelist a{
+    width: 85%;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    font-family: "Roboto";
+    border-radius: 10px;
+    font-size: 18px;
+    line-height: 28px;
+    display: flex;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px #421AD51A;
+    border-radius: 10px;
+    color: #421AD5  !important;
+    opacity: 1;
+}
+
+.bj-platformboxonelist a:last-child{
+    margin-bottom: 0;
+}
+
+.bj-platformboxonelist a::before{
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: url("../Assets/images/AgentBuilder_Icon.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    margin-right: 15px;
+    color: #000;
+}
+
+.bj-platformboxonelist a:nth-child(2):before{
+    background-image: url("../Assets/images/Workflow_Icon.svg");
+}
+
+.bj-platformboxonelist a:nth-child(3):before{
+    background-image: url("../Assets/images/ModelBuilder_Icon.svg");
+}
+
+.bj-platformboxonelist a:nth-child(4):before{
+    background-image: url("../Assets/images/Guardrails_Icon.svg");
+} 
+
+.bj-platformboxonelist a{
+    color: #000;
+}
+
+.bj-platformboxonebtn{
+    display: flex;
+    align-items: center;
+}
+
+.bj-platformboxtwo{
+    width: 50%;
+}
+
+.bj-platformboxthree{
+    width: 50%;
+}
+
+.bj-platformbox{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.bj-platformboxthree{
+    padding-left: 30px;
+}
+
+.bj-platformAgent{
+    margin-right: 20px;
+    justify-content: flex-end;
+}
+
+.bj-platform{
+    width: 40px;
+    height: 40px;
+}
+
+.bj-platformbox h4{
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 400;
+    font-family: "Roboto-medium";
+}
+
+.bj-platformboxthree p{
+    font-size: 18px;
+    line-height: 32px;
+    color: #868d98;
+    font-weight: normal;
+    margin-left: 65px;
+    margin-bottom: 30px;
+}
+
+.btn_Explore{
+    padding: 15px 30px;
+    background: #5A3ED9 0% 0% no-repeat padding-box;
+    border-radius: 0px 25px 25px 25px;
+    display: inline-flex;
+    margin-left: 70px;
+    font-size: 18px ;
+}
+
+@media screen and (max-width:1660px) {
+
+    .bj-platformbgblock{
+        margin-top: 80px;
+    }
+
+    .bj-platformbglevel{
+        padding-bottom: 80px;
+    }
+    
+    .bj-platformboxblock{
+        height: 440px;
+    }    
+
+    .bj-platformbglevel h3{
+        font-size: 36px;
+    }
+
+    .bj-platformboxonelist a{
+        font-size: 16px;
+        line-height: 26px;
+        margin-bottom: 15px;
+        padding: 15px 25px;
+    }
+
+    .bj-platformboxonelist a::before{
+        margin-right: 20px;
+    }
+
+    /* .bj-platformboxonelist{
+
+    } */
+
+    .bj-platformboxlogblock{
+        width: 350px;
+    }
+
+    .bj-platformAgent{
+        margin-right: 10px;
+    }
+
+    .bj-platformbox{
+        margin-bottom: 15px;
+    }
+
+    .bj-platformbox h4{
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .bj-platformboxthree p{
+        font-size: 16px;
+        line-height: 26px;
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+
+    .btn_Explore{
+        font-size: 16px;
+        margin-left: 55px;
+    }    
+}
+
+@media screen and (max-width:1440px) {
+
+    .bj-platformboxblock{
+        margin-top: 60px;
+    }
+
+    .bj-platformbglevel h3{
+        font-size: 32px;
+    }
+    
+    .bj-platformbox h4{
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .bj-platformboxonelist a{
+        padding:12px 20px
+    }
+
+    .bj-platformboxonelist a::before{
+        width: 35px;
+        height: 35px;
+    }
+
+    .bj-platform{
+        width: 35px;
+        height: 35px;
+    }
+
+    .btn_Explore{
+        font-size: 14px;
+    }
+    
+}
+
+@media screen and (max-width:1366px) {
+    .bj-platformbglevel h3{
+        font-size: 30px;
+    }
+
+    .bj-platformboxblock{
+        margin-top: 50px;
+    }
+
+    .bj-platformbox {
+        margin-bottom: 10px;
+    }
+
+    .bj-platformboxthree p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    
+
+}
+
+@media screen and (max-width:1200px) {
+    .bj-platformbglevel h3 {
+        font-size: 28px;
+    }
+
+    .bj-platformboxonelist a{
+        font-size: 14px;
+        width: 220px;
+    }
+
+    .bj-platformboxonelist a::before{
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+    }
+
+    .bj-platformboxlogblock {
+        width: 300px;
+    }
+
+    .bj-platformboxblock {
+        height: 375px;
+    }
+
+    .bj-platform {
+        width: 25px;
+        height: 25px;
+    }
+
+    .bj-platformbox h4 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .bj-platformboxthree p {
+        margin-left: 40px;
+        margin-bottom: 15px;
+    }
+
+    .btn_Explore {
+        font-size: 12px;
+        padding: 12px 25px; 
+        margin-left: 45px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .bj-platformbox h4 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .bj-platformboxthree p {
+        font-size: 12px;
+        line-height: 22px;
+    }
+}
+
+@media screen and (max-width:990px) {
+
+    .bj-platformbgblock{
+        margin-top: 50px;
+    }
+
+    .bj-platformbglevel {
+        padding-bottom: 50px;
+    }
+
+    .bj-platformbglevel {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .bj-platformboxlogblock {
+        width: 250px;
+    }
+
+    .bj-platformboxblock {
+        height: 320px;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+
+    .bj-platformboxthree{
+        padding-left: 20px;
+    }
+
+    .bj-platformboxonelist a{
+        width: 200px;
+        line-height: 22px;
+    }
+
+    .bj-platformbox h4 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .bj-platformboxthree p{
+        margin-left: 40px;
+    }
+
+    .btn_Explore{
+        margin-left: 40px;
+    }
+
+    .bj-platformboxonelist a {
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width:850px) {
+
+    .bj-platformbglevel h3 {
+        font-size: 26px;
+    }
+
+    .bj-platformboxblock {
+        margin-top: 35px;
+    }
+
+    .bj-platformboxone{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    .bj-platformboxonelist{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        /* margin-bottom: 25px; */
+    }
+
+    .bj-platformboxonelist a{
+        width: auto;
+        display: inline-flex;
+        flex: 0 0 auto;
+        overflow-x: scroll;
+        margin-bottom: 0;
+        font-size: 12px;
+        margin-right: 20px;
+    }
+
+    .bj-platformboxblock{
+        flex-direction: column;
+        height: unset;
+    }
+
+    .bj-platformboxone, .bj-platformboxlevel{
+        width: 100%;
+    }
+
+    .bj-platformboxlevel{
+        height: 320px;
+    }
+
+    .bj-platformboxtwo{
+        width: 40%;
+    }
+
+    .bj-platformboxthree {
+        width: 60%;
+    }
+
+    .bj-platformAgent{
+        margin-right: 12px;
+    }
+
+    /* .bj-platformboxthree p{
+        margin-left: 55px;
+    } */
+
+    /* .btn_Explore{
+        margin-left: 55px;
+    } */
+}
+
+@media screen and (max-width:768px) {
+    .bj-platformboxlevel {
+        height: 290px;
+    }
+
+    .bj-platformboxthree p {
+        margin-left: 35px;
+    }
+
+    .btn_Explore {
+        margin-left: 35px;
+    }
+
+    /* .bj-platformboxone{
+        margin-bottom: 20px;
+    } */
+
+    .bj-platformboxoneleftbtnblock, .bj-platformboxonerightbtnblock{
+        display: flex;
+    }
+
+    .bj-platformboxoneleftbtnblock{
+        width: 35px;
+        height: 35px;
+        background-color: rgba(246, 244, 253);
+        position: absolute;
+        left: -30px;
+        z-index: 1;
+    }
+
+    .bj-platformboxonerightbtnblock{
+        width: 50px;
+        height: 35px;
+        background-color: rgba(246, 244, 253);
+        position: absolute;
+        right: -20px;
+        z-index: 1;
+    }
+
+    .bj-platformboxoneleftbtn, .bj-platformboxonerightbtn{
+        width: 25px;
+    }
+
+    .bj-platformAgent {
+        margin-right: 10px;
+    }
+
+    .bj-platformboxlogblock{
+        width: 200px;
+    }
+
+    .bj-platformboxthree{
+        padding-left: 20px;
+    }
+
+    .bj-platformbglevel h3 {
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    .bj-platformboxonelist{
+        position: relative;
+        align-items: center;
+    }
+
+    .bj-platformboxoneleft{
+        display: flex;
+        /* flex: 0 0 auto; */
+        position: absolute;
+        left: 0;
+    }
+
+    /* .bj-platformboxoneleftbtn{
+        width: 30px;
+        transform: rotate(180deg);
+    } */
+
+    .bj-platformboxoneright{
+        display: flex;
+        /* flex: 0 0 auto; */
+        position: absolute;
+        right: 0;
+    }
+
+    .btn_Explore{
+        padding: 10px 20px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:535px) {
+    .bj-platformboxlevel {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .bj-platformbox1{
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+
+    .bj-platformboxlevel{
+        height: 500px;
+    }
+
+    .bj-platformboxtwo{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .bj-platformboxthree{
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .bj-platformboxonelist a::before {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+
+    .bj-platformboxonelist{
+        margin-left: 20px;
+    }
+
+    .bj-platformboxonelist a{
+        margin-right: 10px;
+        padding: 10px 12px;
+    }
+
+    .bj-platformbglevel h3 {
+        font-size: 22px;
+    }
+
+    .bj-platformboxblock {
+        margin-top: 30px;
+    }
+
+    .bj-platform {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .bj-platformboxlevel {
+        height: 520px;
+    }
+
+    .bj-platformboxthree p {
+        margin-left: 30px;
+    }
+
+    .btn_Explore {
+        margin-left: 30px;
+    }
+
+    .bj-platformboxoneleftbtnblock{
+        left: -20px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .bj-platformboxlevel {
+        height: 550px;
+    }
+}

@@ -1,0 +1,39 @@
+.bj-OspectraAboutBanner main{
+    height:400px;
+}
+
+.bj-OspectraAboutBanner .bj-bannermainimage{
+    background-image: url("../Assets/images/AboutUs_Banner_Img.webp");
+}
+
+.bj-OspectraAboutBanner .bj-bannermainlogo{
+    background-image: url("../Assets/images/AboutUs_Banner_Overlay.svg");
+}
+
+@media screen and (max-width:1440px) {
+    .bj-OspectraAboutBanner main{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .bj-OspectraAboutBanner main{
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:990px) {
+    .bj-OspectraAboutBanner main{
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .bj-OspectraAboutBanner .bj-bannermainimage{
+        background-image: url("../Assets/images/AboutUs_Banner_Mobile_Img.webp");
+    }
+
+    .bj-OspectraAboutBanner .bj-bannermainlogo{
+        background-image: url("../Assets/images/AboutUs_Banner_Overlay.svg");
+    }
+}

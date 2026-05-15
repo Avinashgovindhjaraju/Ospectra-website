@@ -1,0 +1,15 @@
+.bj-BlogdetailsRelatedpostSection{
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.bj-BlogdetailsRelatedpostblock{
+    width: 100%;
+    height: 100%;
+}
+
+.bj-BlogdetailsRelatedpostlevel{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}

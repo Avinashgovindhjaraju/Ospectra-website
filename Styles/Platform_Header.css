@@ -1,0 +1,26 @@
+
+
+
+@media screen and (max-width:990px) {
+    .bj-OspectraPlatformBanner .nav-menu {
+        height: 43%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .bj-OspectraPlatformBanner .nav-menu {
+        height: 33%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .bj-OspectraPlatformBanner .nav-menu {
+        height: 31%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .bj-OspectraPlatformBanner .nav-menu {
+        height: 29%;
+    }
+}
