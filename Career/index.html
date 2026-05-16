@@ -27,18 +27,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../Assets/images/OspectraIcon.svg" />
     <link rel="icon" type="image/svg+xml" href="../Assets/images/Favicon.webp">
 
-    <link async rel="preload" as="image" href="../Assets/images/Ospectra_Logo_Color.svg">
-    <link async rel="preload" as="image" href="../Assets/images/AboutUs_Banner_Img.webp">
-    <link async rel="preload" as="image" href="../Assets/images/HomeBanner_Overlay.svg">
-    <link async rel="preload" as="image" href="../Assets/images/AboutUs_Banner_Mobile_Img.webp">
-    <link async rel="preload" as="image" href="../Assets/images/HomeBanner_Overlay_Mobile.svg">
-    <link async rel="preload" as="image" href="../Assets/images/Logo_HalfCircle_Color.svg">
-    <link async rel="preload" as="image" href="../Assets/images/Ospectra_Logo_White.svg">
-    <link async rel="preload" as="image" href="../Assets/images/Logo_HalfCircle_White.svg">
-    <link async rel="preload" as="image" href="../Assets/images/Footer_Wave.svg">
-    <link async rel="preload" as="image" href="../Assets/images/Twitter_Icon.svg">
-    <link async rel="preload" as="image" href="../Assets/images/linkedin_Icon.svg">
-    <link async rel="preload" as="image" href="../Assets/images/craftedbyGood.svg">
+    <link rel="preload" as="image" href="../Assets/images/Ospectra_Logo_Color.svg">
+    <link rel="preload" as="image" href="../Assets/images/AboutUs_Banner_Img.webp">
+    <link rel="preload" as="image" href="../Assets/images/Logo_HalfCircle_Color.svg">
+    <link rel="preload" as="image" href="../Assets/images/Ospectra_Logo_White.svg">
+    <link rel="preload" as="image" href="../Assets/images/Logo_HalfCircle_White.svg">
+    <link rel="preload" as="image" href="../Assets/images/Twitter_Icon.svg">
+    <link rel="preload" as="image" href="../Assets/images/linkedin_Icon.svg">
+    <link rel="preload" as="image" href="../Assets/images/craftedbyGood.svg">
 
     <link rel="stylesheet" href="../Styles/aos.css">
     <link rel="stylesheet" href="../Styles/Style.css"/>
@@ -325,10 +321,7 @@
             validateInputs();
         }
 
-        /* ── 1. GOOGLE SHEETS (Ospectra Account) ─────────────
-           Sheet: Career Applications (avinash.govindharaju@ospectra.ai)
-           Columns: Timestamp | Purpose | Name | Email | Phone | Message
-        ──────────────────────────────────────────────────── */
+        /* ── 1. GOOGLE SHEETS ────────────────────────────── */
         var SHEET_URL = 'https://script.google.com/macros/s/AKfycbx4gfkzHgIqJcAt41mbbRA0yI88N0ias3EbApifGZ09DJ2croPlOoZuAomA17e98Iy3/exec';
 
         function sendToGoogleSheet(name, email, phone, message) {
@@ -342,7 +335,7 @@
             return fetch(SHEET_URL, { method: 'POST', body: formData })
                 .then(function(r) { return r.json(); })
                 .then(function(d) {
-                    console.log('Google Sheets: row saved to Career Applications table');
+                    console.log('✅ Google Sheets: row saved');
                     return true;
                 })
                 .catch(function(err) {
@@ -351,7 +344,11 @@
                 });
         }
 
-        /* ── 2. HUBSPOT CRM ──────────────────────────────── */
+        /* ── 2. HUBSPOT CRM ──────────────────────────────── 
+           ✅ FIXED: correct field names for phone & message
+           phone   → 'phone'   (HubSpot standard property)
+           message → 'message' (HubSpot standard property)
+        ─────────────────────────────────────────────────── */
         function sendToHubSpot(name, email, phone, message) {
             var portalId = '246206420';
             var formId   = '99f0aba5-d279-44ed-91fe-f5a3ee140c4c';
@@ -365,11 +362,11 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     fields: [
-                        { name: 'firstname',  value: firstName },
-                        { name: 'lastname',   value: lastName  },
-                        { name: 'email',      value: email     },
-                        { name: 'phone',      value: phone     },
-                        { name: 'hs_message', value: message   }
+                        { name: 'firstname', value: firstName },
+                        { name: 'lastname',  value: lastName  },
+                        { name: 'email',     value: email     },
+                        { name: 'phone',     value: phone     }, // ✅ Fixed
+                        { name: 'message',   value: message   }  // ✅ Fixed
                     ],
                     context: {
                         pageUri:  window.location.href,
@@ -378,13 +375,16 @@
                 })
             })
             .then(function(res) {
-                if (res.ok) console.log('HubSpot: contact saved');
-                else res.json().then(function(e) { console.warn('HubSpot error:', e); });
+                if (res.ok) {
+                    console.log('✅ HubSpot: contact + phone + message saved');
+                } else {
+                    res.json().then(function(e) { console.warn('⚠️ HubSpot error:', e); });
+                }
             })
-            .catch(function(err) { console.warn('HubSpot network error:', err); });
+            .catch(function(err) { console.warn('⚠️ HubSpot network error:', err); });
         }
 
-        /* ── ON SUBMIT — sends to BOTH simultaneously ─────── */
+        /* ── ON SUBMIT ───────────────────────────────────── */
         function onSubmit(event) {
             event.preventDefault();
 
@@ -408,7 +408,7 @@
             submitButton.disabled    = true;
             successBox.style.display = 'flex';
 
-            // ✅ Send to BOTH: Ospectra Google Sheet + HubSpot CRM
+            // ✅ Send to BOTH: Google Sheets + HubSpot CRM
             sendToHubSpot(name, email, phone, message);
             sendToGoogleSheet(name, email, phone, message).then(function() {
                 setTimeout(function() {
