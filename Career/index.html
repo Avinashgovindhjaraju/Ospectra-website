@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Careers at Ospectra - Join Our AI Innovation Team</title>
-    
-    <!-- Meta Tag -->
     <meta name="title" content="Careers at Ospectra - Join Our AI Innovation Team">
     <meta name="description" content="Find exciting career opportunities at Ospectra. Join a fast-growing team where innovation, collaboration, and continuous learning drive impactful AI solutions and professional growth.">
     <meta name="keywords" content="AI Career Opportunities,AI Job Openings,AI Developer Jobs,AI Engineer Roles,AI Transparency Culture,AI Ownership Mindset,AI Teamwork,AI Professional Growth,GoodUX,AI Employee Rewards,AI Accountability,AI Work Culture,AI Career Growth">
@@ -23,28 +21,25 @@
     <meta property="og:image:height" content="450">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Careers at Ospectra - Join Our AI Innovation Team">
-    
-    <!-- favicons Icons -->
+
     <link rel="apple-touch-icon" sizes="180x180" href="../Assets/images/OspectraIcon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="../Assets/images/OspectraIcon.svg" />
     <link rel="icon" type="image/png" sizes="16x16" href="../Assets/images/OspectraIcon.svg" />
     <link rel="icon" type="image/svg+xml" href="../Assets/images/Favicon.webp">
 
-    <!-- Preload-->
     <link async rel="preload" as="image" href="../Assets/images/Ospectra_Logo_Color.svg">
-	<link async rel="preload" as="image" href="../Assets/images/AboutUs_Banner_Img.webp">
-	<link async rel="preload" as="image" href="../Assets/images/HomeBanner_Overlay.svg">
-	<link async rel="preload" as="image" href="../Assets/images/AboutUs_Banner_Mobile_Img.webp">
-	<link async rel="preload" as="image" href="../Assets/images/HomeBanner_Overlay_Mobile.svg">
+    <link async rel="preload" as="image" href="../Assets/images/AboutUs_Banner_Img.webp">
+    <link async rel="preload" as="image" href="../Assets/images/HomeBanner_Overlay.svg">
+    <link async rel="preload" as="image" href="../Assets/images/AboutUs_Banner_Mobile_Img.webp">
+    <link async rel="preload" as="image" href="../Assets/images/HomeBanner_Overlay_Mobile.svg">
     <link async rel="preload" as="image" href="../Assets/images/Logo_HalfCircle_Color.svg">
     <link async rel="preload" as="image" href="../Assets/images/Ospectra_Logo_White.svg">
     <link async rel="preload" as="image" href="../Assets/images/Logo_HalfCircle_White.svg">
     <link async rel="preload" as="image" href="../Assets/images/Footer_Wave.svg">
     <link async rel="preload" as="image" href="../Assets/images/Twitter_Icon.svg">
     <link async rel="preload" as="image" href="../Assets/images/linkedin_Icon.svg">
-	<link async rel="preload" as="image" href="../Assets/images/craftedbyGood.svg">
+    <link async rel="preload" as="image" href="../Assets/images/craftedbyGood.svg">
 
-    <!-- style sheets and font icons -->
     <link rel="stylesheet" href="../Styles/aos.css">
     <link rel="stylesheet" href="../Styles/Style.css"/>
     <link rel="stylesheet" href="../Styles/Header.css">
@@ -59,14 +54,12 @@
     <link rel="stylesheet" href="../Styles/Career_Form.css">
     <link rel="stylesheet" href="../Styles/Footer.css">
     <link rel="stylesheet" href="../Styles/Book_Demo.css">
-    <!-- Ospectra Tracker -->
     <script src="https://tracker-ospectra-ai.onrender.com/static/tracker.js" defer></script>
 </head>
 <body>
-    <!-- start header -->
     <section>
         <div class="bj-Ospectraanimation" data-aos="fade-down" data-aos-duration="1000">
-            <div class="bj-Ospectrabanner bj-OspectraPlatformBanner  bj-OspectraCareerBanner flex_center">
+            <div class="bj-Ospectrabanner bj-OspectraPlatformBanner bj-OspectraCareerBanner flex_center">
                 <div class="d-flex">
                     <div class="pb_1">
                         <header class="flex_center">
@@ -305,94 +298,93 @@
         </div>
     </div>
 
-    <!--Validation_Section-->
     <script>
+        /* ── VALIDATION ─────────────────────────────────── */
         function validateName() {
-            const usernameInput = document.getElementById('Name');
-            const regex = /^[a-zA-Z\s]+$/;
-            return regex.test(usernameInput.value.trim());
+            return /^[a-zA-Z\s]+$/.test(document.getElementById('Name').value.trim());
         }
-
         function validatePhone() {
-            const mobileInput = document.getElementById("Phone");
-            const regex = /^[6-9]\d{9}$/;
-            return regex.test(mobileInput.value.trim());
+            return /^[6-9]\d{9}$/.test(document.getElementById('Phone').value.trim());
         }
-
         function validateEmail() {
-            const emailInput = document.getElementById("Email");
-            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return regex.test(emailInput.value.trim());
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('Email').value.trim());
         }
-
         function validateTextarea() {
-            const textareaInput = document.getElementById("Message");
-            return textareaInput.value.trim() !== '';
+            return document.getElementById('Message').value.trim() !== '';
         }
-
         function validateInputs() {
-            const submitButton = document.getElementById("submitButton");
-            const isFormValid = validateName() && validatePhone() && validateEmail() && validateTextarea();
-            submitButton.disabled = !isFormValid;
+            document.getElementById('submitButton').disabled =
+                !(validateName() && validatePhone() && validateEmail() && validateTextarea());
         }
-
         function errormessage(errorId, validationType) {
             const error = document.getElementById(errorId);
-            if (validationType === "name") {
-                error.innerHTML = validateName() ? '' : 'Please enter a valid name';
-            } else if (validationType === "phone") {
-                error.innerHTML = validatePhone() ? '' : 'Please enter a valid phone number';
-            } else if (validationType === "email") {
-                error.innerHTML = validateEmail() ? '' : 'Please enter a valid email';
-            } else if (validationType === "message") {
-                error.innerHTML = validateTextarea() ? '' : 'Please input text into the message field';
-            }
+            if (validationType === "name")    error.innerHTML = validateName()     ? '' : 'Please enter a valid name';
+            if (validationType === "phone")   error.innerHTML = validatePhone()    ? '' : 'Please enter a valid phone number';
+            if (validationType === "email")   error.innerHTML = validateEmail()    ? '' : 'Please enter a valid email';
+            if (validationType === "message") error.innerHTML = validateTextarea() ? '' : 'Please input text into the message field';
             validateInputs();
         }
 
-        // ✅ HubSpot Forms API — field names match exactly what Career Form expects
-        function submitToHubSpot(name, email, phone, message) {
+        /* ── 1. GOOGLE SHEETS (Ospectra Account) ─────────────
+           Sheet: Career Applications (avinash.govindharaju@ospectra.ai)
+           Columns: Timestamp | Purpose | Name | Email | Phone | Message
+        ──────────────────────────────────────────────────── */
+        var SHEET_URL = 'https://script.google.com/macros/s/AKfycbx4gfkzHgIqJcAt41mbbRA0yI88N0ias3EbApifGZ09DJ2croPlOoZuAomA17e98Iy3/exec';
+
+        function sendToGoogleSheet(name, email, phone, message) {
+            var formData = new FormData();
+            formData.append('Purpose',  'Career');
+            formData.append('Fullname', name);
+            formData.append('Email',    email);
+            formData.append('Phone',    phone);
+            formData.append('Message',  message);
+
+            return fetch(SHEET_URL, { method: 'POST', body: formData })
+                .then(function(r) { return r.json(); })
+                .then(function(d) {
+                    console.log('Google Sheets: row saved to Career Applications table');
+                    return true;
+                })
+                .catch(function(err) {
+                    console.error('Google Sheets error:', err);
+                    return false;
+                });
+        }
+
+        /* ── 2. HUBSPOT CRM ──────────────────────────────── */
+        function sendToHubSpot(name, email, phone, message) {
             var portalId = '246206420';
             var formId   = '99f0aba5-d279-44ed-91fe-f5a3ee140c4c';
-            var url = 'https://api.hsforms.com/submissions/v3/integration/submit/' + portalId + '/' + formId;
-
-            var nameParts = name.trim().split(' ');
-            var firstName = nameParts[0] || name;
-            var lastName  = nameParts.slice(1).join(' ') || '';
-
-            var payload = {
-                fields: [
-                    { name: 'firstname',  value: firstName },
-                    { name: 'lastname',   value: lastName  },
-                    { name: 'email',      value: email     },
-                    { name: 'phone',      value: phone     },
-                    { name: 'hs_message', value: message   }  // ✅ corrected from 'message' to 'hs_message'
-                ],
-                context: {
-                    pageUri: window.location.href,
-                    pageName: document.title
-                }
-            };
+            var url      = 'https://api.hsforms.com/submissions/v3/integration/submit/' + portalId + '/' + formId;
+            var parts     = name.trim().split(' ');
+            var firstName = parts[0] || name;
+            var lastName  = parts.slice(1).join(' ') || '';
 
             fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
+                body: JSON.stringify({
+                    fields: [
+                        { name: 'firstname',  value: firstName },
+                        { name: 'lastname',   value: lastName  },
+                        { name: 'email',      value: email     },
+                        { name: 'phone',      value: phone     },
+                        { name: 'hs_message', value: message   }
+                    ],
+                    context: {
+                        pageUri:  window.location.href,
+                        pageName: document.title
+                    }
+                })
             })
             .then(function(res) {
-                return res.json().then(function(data) {
-                    if (res.ok) {
-                        console.log('✅ HubSpot: Submission successful', data);
-                    } else {
-                        console.warn('⚠️ HubSpot error response:', data);
-                    }
-                });
+                if (res.ok) console.log('HubSpot: contact saved');
+                else res.json().then(function(e) { console.warn('HubSpot error:', e); });
             })
-            .catch(function(err) {
-                console.warn('⚠️ HubSpot network error:', err);
-            });
+            .catch(function(err) { console.warn('HubSpot network error:', err); });
         }
 
+        /* ── ON SUBMIT — sends to BOTH simultaneously ─────── */
         function onSubmit(event) {
             event.preventDefault();
 
@@ -401,32 +393,30 @@
             const successBox   = document.getElementById('bj-Suceesboxblock');
             document.getElementById('Purpose').value = "Career";
 
-            // Trigger validation for all fields
             errormessage('nameErr',    'name');
             errormessage('phoneErr',   'phone');
             errormessage('emailErr',   'email');
             errormessage('messageErr', 'message');
 
-            const isValid = validateName() && validatePhone() && validateEmail() && validateTextarea();
-            if (!isValid) return;
+            if (!validateName() || !validatePhone() || !validateEmail() || !validateTextarea()) return;
 
             const name    = document.getElementById('Name').value.trim();
             const email   = document.getElementById('Email').value.trim();
             const phone   = document.getElementById('Phone').value.trim();
             const message = document.getElementById('Message').value.trim();
 
-            submitButton.disabled = true;
+            submitButton.disabled    = true;
+            successBox.style.display = 'flex';
 
-            // Send to HubSpot CRM only
-            submitToHubSpot(name, email, phone, message);
-
-            // Show success box, then reset
-            successBox.style.display = "flex";
-            setTimeout(() => {
-                successBox.style.display = "none";
-                form.reset();
-                submitButton.disabled = false;
-            }, 3000);
+            // ✅ Send to BOTH: Ospectra Google Sheet + HubSpot CRM
+            sendToHubSpot(name, email, phone, message);
+            sendToGoogleSheet(name, email, phone, message).then(function() {
+                setTimeout(function() {
+                    successBox.style.display = 'none';
+                    form.reset();
+                    submitButton.disabled = false;
+                }, 3000);
+            });
         }
     </script>
 
@@ -442,13 +432,11 @@
         });
     </script>
 
-    <!--Scripts-->
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script src="../Scripts/aos.js"></script>
     <script src="../Scripts/Script.js"></script>
     <script>AOS.init();</script>
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1RMNCR6FMH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -457,4 +445,4 @@
         gtag('config', 'G-1RMNCR6FMH');
     </script>
 </body>
-</html>s
+</html>
