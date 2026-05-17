@@ -361,8 +361,8 @@
                         { name: 'firstname',   value: firstName },
                         { name: 'lastname',    value: lastName  },
                         { name: 'email',       value: email     },
-                        { name: 'message',     value: message   }  // ✅ Correct
-                        { name: 'mobilephone', value: phone     }, // ✅ Fixed: was 'phone'
+                        { name: 'message',     value: message   },  // ✅ Correct
+                        { name: 'mobilephone', value: phone     } // ✅ Fixed: was 'phone'
                     ],
                     context: {
                         pageUri:  window.location.href,
@@ -405,7 +405,7 @@
             successBox.style.display = 'flex';
 
             // ✅ Send to BOTH: Google Sheets + HubSpot CRM
-            sendToHubSpot(name, email, phone, message);
+            sendToHubSpot(name, email, message, phone);
             sendToGoogleSheet(name, email, phone, message).then(function() {
                 setTimeout(function() {
                     successBox.style.display = 'none';
