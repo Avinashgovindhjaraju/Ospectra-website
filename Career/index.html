@@ -375,7 +375,7 @@
                 if (res.ok) {
                     console.log('✅ HubSpot: contact + phone + message saved');
                 } else {
-                    res.json().then(function(e) { console.warn('⚠️ HubSpot error:', e); });
+                    res.json().then(function(e) { console.warn('⚠️ HubSpot error: ' + JSON.stringify(e)); });
                 }
             })
             .catch(function(err) { console.warn('⚠️ HubSpot network error:', err); });
