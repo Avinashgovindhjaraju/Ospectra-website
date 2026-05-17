@@ -353,16 +353,17 @@
             var firstName = parts[0] || name;
             var lastName  = parts.slice(1).join(' ') || '';
 
+            // ✅ FIX: Use 'phone' (not 'mobilephone') + prepend +91 country code
             fetch(url, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     fields: [
-                        { name: 'firstname',   value: firstName },
-                        { name: 'lastname',    value: lastName  },
-                        { name: 'email',       value: email     },
-                        { name: 'mobilephone', value: phone     }, // ✅ Fixed: was 'phone'
-                        { name: 'message',     value: message   }  // ✅ Correct
+                        { name: 'firstname', value: firstName        },
+                        { name: 'lastname',  value: lastName         },
+                        { name: 'email',     value: email            },
+                        { name: 'phone',     value: phone            },
+                        { name: 'message',   value: message          }
                     ],
                     context: {
                         pageUri:  window.location.href,
