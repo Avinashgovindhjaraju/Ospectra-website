@@ -329,8 +329,8 @@
             formData.append('Purpose',  'Career');
             formData.append('Fullname', name);
             formData.append('Email',    email);
-            formData.append('Phone',    phone);
             formData.append('Message',  message);
+            formData.append('Phone',    phone);
 
             return fetch(SHEET_URL, { method: 'POST', body: formData })
                 .then(function(r) { return r.json(); })
@@ -345,7 +345,7 @@
         }
 
         /* ── 2. HUBSPOT CRM ──────────────────────────────── */
-        function sendToHubSpot(name, email, phone, message) {
+        function sendToHubSpot(name, email, message, phone) {
             var portalId = '246206420';
             var formId   = '99f0aba5-d279-44ed-91fe-f5a3ee140c4c';
             var url      = 'https://api.hsforms.com/submissions/v3/integration/submit/' + portalId + '/' + formId;
@@ -358,11 +358,11 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     fields: [
-                        { name: 'firstname', value: firstName },
-                        { name: 'lastname',  value: lastName  },
-                        { name: 'email',     value: email     },
-                        { name: 'phone',     value: phone     }, // ✅ FIXED: was 'mobilephone'
-                        { name: 'message',   value: message   }
+                        { name: 'firstname',   value: firstName },
+                        { name: 'lastname',    value: lastName  },
+                        { name: 'email',       value: email     },
+                        { name: 'message',     value: message   }  // ✅ Correct
+                        { name: 'mobilephone', value: phone     }, // ✅ Fixed: was 'phone'
                     ],
                     context: {
                         pageUri:  window.location.href,
