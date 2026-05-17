@@ -329,8 +329,8 @@
             formData.append('Purpose',  'Career');
             formData.append('Fullname', name);
             formData.append('Email',    email);
-            formData.append('Message',  message);
             formData.append('Phone',    phone);
+            formData.append('Message',  message);
 
             return fetch(SHEET_URL, { method: 'POST', body: formData })
                 .then(function(r) { return r.json(); })
@@ -345,7 +345,7 @@
         }
 
         /* ── 2. HUBSPOT CRM ──────────────────────────────── */
-        function sendToHubSpot(name, email, message, phone) {
+        function sendToHubSpot(name, email, phone, message) {
             var portalId = '246206420';
             var formId   = '99f0aba5-d279-44ed-91fe-f5a3ee140c4c';
             var url      = 'https://api.hsforms.com/submissions/v3/integration/submit/' + portalId + '/' + formId;
@@ -361,8 +361,8 @@
                         { name: 'firstname',   value: firstName },
                         { name: 'lastname',    value: lastName  },
                         { name: 'email',       value: email     },
-                        { name: 'message',     value: message   },  // ✅ Correct
-                        { name: 'mobilephone', value: phone     } // ✅ Fixed: was 'phone'
+                        { name: 'mobilephone', value: phone     }, // ✅ Fixed: was 'phone'
+                        { name: 'message',     value: message   }  // ✅ Correct
                     ],
                     context: {
                         pageUri:  window.location.href,
@@ -405,7 +405,7 @@
             successBox.style.display = 'flex';
 
             // ✅ Send to BOTH: Google Sheets + HubSpot CRM
-            sendToHubSpot(name, email, message, phone);
+            sendToHubSpot(name, email, phone, message);
             sendToGoogleSheet(name, email, phone, message).then(function() {
                 setTimeout(function() {
                     successBox.style.display = 'none';
