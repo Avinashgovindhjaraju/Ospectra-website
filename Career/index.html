@@ -344,11 +344,7 @@
                 });
         }
 
-        /* ── 2. HUBSPOT CRM ──────────────────────────────── 
-           ✅ FIXED: correct field names for phone & message
-           phone   → 'phone'   (HubSpot standard property)
-           message → 'message' (HubSpot standard property)
-        ─────────────────────────────────────────────────── */
+        /* ── 2. HUBSPOT CRM ──────────────────────────────── */
         function sendToHubSpot(name, email, phone, message) {
             var portalId = '246206420';
             var formId   = '99f0aba5-d279-44ed-91fe-f5a3ee140c4c';
@@ -362,11 +358,11 @@
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     fields: [
-                        { name: 'firstname', value: firstName },
-                        { name: 'lastname',  value: lastName  },
-                        { name: 'email',     value: email     },
-                        { name: 'phone',     value: phone     }, // ✅ Fixed
-                        { name: 'message',   value: message   }  // ✅ Fixed
+                        { name: 'firstname',   value: firstName },
+                        { name: 'lastname',    value: lastName  },
+                        { name: 'email',       value: email     },
+                        { name: 'mobilephone', value: phone     }, // ✅ Fixed: was 'phone'
+                        { name: 'message',     value: message   }  // ✅ Correct
                     ],
                     context: {
                         pageUri:  window.location.href,
