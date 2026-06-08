@@ -55,7 +55,6 @@
     <link rel="stylesheet" href="../Styles/Footer.css">
     <link rel="stylesheet" href="../Styles/Book_Demo.css">
     <link rel="stylesheet" href="../Styles/Chatbot.css"> 
-    
 
     <script src="https://tracker-ospectra-ai.onrender.com/static/tracker.js" defer></script>
 </head>
@@ -189,6 +188,17 @@
     </div>
 
     <script>
+        // =====================================================
+        // 🔴 REPLACE THIS WITH YOUR ACTUAL TOKEN FROM HUBSPOT
+        // Legacy Apps → Query → Auth tab → Access Token
+        // =====================================================
+        var HUBSPOT_TOKEN = "";
+
+        // ✅ List ID taken from your URL: /objectLists/13/
+        var HUBSPOT_LIST_ID = "";
+
+        // --------------------------------------------------
+
         function validateName()     { return /^[a-zA-Z\s]+$/.test(document.getElementById('Name').value.trim()); }
         function validatePhone()    { return /^\d{7,15}$/.test(document.getElementById('Phone').value.trim()); }
         function validateEmail()    { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('Email').value.trim()); }
@@ -208,27 +218,91 @@
             validateInputs();
         }
 
-        // ✅ HubSpot CRM API submission
+        // ✅ Step 1: Submit to HubSpot Form
+        // ✅ Step 2: Create contact via CRM API
+        // ✅ Step 3: Add contact to List ID 13
         function submitToHubSpot(name, phone, email, message) {
             var nameParts = name.trim().split(' ');
+            var firstname = nameParts[0] || '';
+            var lastname  = nameParts.slice(1).join(' ') || '';
+
+            // --- Step 1: HubSpot Form Submission ---
             var payload = {
                 fields: [
-                    { name: 'firstname', value: nameParts[0] || '' },
-                    { name: 'lastname',  value: nameParts.slice(1).join(' ') || '' },
-                    { name: 'phone',     value: phone   },
-                    { name: 'email',     value: email   },
-                    { name: 'message',   value: message }
+                    { name: 'firstname', value: firstname },
+                    { name: 'lastname',  value: lastname  },
+                    { name: 'phone',     value: phone     },
+                    { name: 'email',     value: email     },
+                    { name: 'message',   value: message   }
                 ],
                 context: { pageUri: window.location.href, pageName: document.title }
             };
+
             fetch('https://api.hsforms.com/submissions/v3/integration/submit/246206420/ee9a50fe-7e05-4f16-8baf-59ec561926a5', {
                 method:  'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body:    JSON.stringify(payload)
             })
-            .then(res => res.json())
-            .then(data => console.log('✅ HubSpot success:', data))
-            .catch(err => console.error('❌ HubSpot error:', err));
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                console.log('✅ HubSpot Form success:', data);
+
+                // --- Step 2: Create/find contact via CRM API ---
+                return fetch('https://api.hubapi.com/crm/v3/objects/contacts', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type':  'application/json',
+                        'Authorization': 'Bearer ' + HUBSPOT_TOKEN
+                    },
+                    body: JSON.stringify({
+                        properties: {
+                            firstname: firstname,
+                            lastname:  lastname,
+                            email:     email,
+                            phone:     phone
+                        }
+                    })
+                });
+            })
+            .then(function(res) { return res.json(); })
+            .then(function(contactData) {
+                console.log('✅ CRM Contact response:', contactData);
+
+                var contactId = contactData.id;
+
+                // If contact already exists, extract ID from error message
+                if (!contactId && contactData.message && contactData.message.indexOf('Contact already exists') !== -1) {
+                    var match = contactData.message.match(/ID: (\d+)/);
+                    if (match) contactId = match[1];
+                }
+
+                if (!contactId) {
+                    console.warn('⚠️ Could not get contact ID. List add skipped.');
+                    return;
+                }
+
+                console.log('✅ Contact ID:', contactId);
+
+                // --- Step 3: Add contact to List ID 13 ---
+                return fetch('https://api.hubapi.com/crm/v3/lists/' + HUBSPOT_LIST_ID + '/memberships/add', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type':  'application/json',
+                        'Authorization': 'Bearer ' + HUBSPOT_TOKEN
+                    },
+                    body: JSON.stringify({ recordIds: [contactId] })
+                });
+            })
+            .then(function(res) {
+                if (!res) return;
+                return res.json();
+            })
+            .then(function(listData) {
+                if (listData) console.log('✅ Added to HubSpot List 13:', listData);
+            })
+            .catch(function(err) {
+                console.error('❌ HubSpot error:', err);
+            });
         }
 
         function onSubmit(event) {
@@ -252,7 +326,7 @@
             successBox.style.display = 'flex';
             submitBtn.disabled = true;
 
-            // ✅ 1. HubSpot CRM
+            // ✅ 1. HubSpot CRM + List
             submitToHubSpot(name, phone, email, message);
 
             // ✅ 2. Google Sheet
@@ -260,13 +334,13 @@
                 method: 'POST',
                 body:   new FormData(form)
             })
-            .then(res => res.json())
-            .then(() => {
+            .then(function(res) { return res.json(); })
+            .then(function() {
                 console.log('✅ Google Sheet success');
-                setTimeout(() => { successBox.style.display = 'none'; form.reset(); }, 2000);
+                setTimeout(function() { successBox.style.display = 'none'; form.reset(); }, 2000);
             })
-            .catch(() => { alert('Something went wrong. Please try again later.'); form.reset(); })
-            .finally(() => { submitBtn.disabled = false; });
+            .catch(function() { alert('Something went wrong. Please try again later.'); form.reset(); })
+            .finally(function() { submitBtn.disabled = false; });
         }
     </script>
 
